@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Unicom Blog system</title>
+	<!-- Bootstrap Core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+		rel="stylesheet" type="text/css">
+	<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+	<!--Custom CSS-->
+	<link rel="stylesheet" type="text/css" href="CSS/login.css" />
+</head>
+
+<body id="page-top">
+	<!--Navigation-->
+	<a href="" class="menu-toggle rounded" href="#">
+
+	</a>
+
+	<a class="menu-toggle rounded" href="#">
+		<i class="fas fa-bars"></i>
+	</a>
+	<nav id="sidebar-wrapper">
+		<ul class="sidebar-nav">
+			<li class="sidebar-brand">
+				<a class="js-scroll-trigger" href="#page-top">Unicom Blog</a>
+			</li>
+			<li class="sidebar-nav-item">
+				<a class="login-btn" href="#" data-toggle="modal" data-target="#loginPopUp">用户登陆</a>
+			</li>
+			<li class="sidebar-nav-item">
+				<a class="register" href="#" data-toggle="modal" data-target="#registerPopUp">用户注册</a>
+			</li>
+			<li class="sidebar-nav-item">
+				<a class="js-scroll-trigger" href="#about">随便看看</a>
+			</li>
+			<!-- <li class="sidebar-nav-item">
+					<a class="js-scroll-trigger" href="#footerInfo">关于我们</a>
+				</li> -->
+			<li class="sidebar-nav-item">
+				<a class="js-scroll-trigger" href="#footerInfo">版权所有</a>
+			</li>
+		</ul>
+	</nav>
+
+	<header class="masthead d-flex">
+		<div class="container text-center my-auto">
+			<h1 class="mb-1">Unicom Blog System</h1>
+			<h3 class="mb-5">
+				书写你的简单生活
+			</h3>
+			<a class="btn btn-primary btn-xl js-scroll-trigger" id="lookaround" href="#about">随便看看</a>
+		</div>
+		<div class="overlay"></div>
+	</header>
+
+	<!--modal登录模块 -->
+	<div class="modal fade" id="loginPopUp" role="dialog" aria-labelledby="loginPopUp" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<!-- <h5 class="modal-title" id="loginPopUp">用户登陆</h5> -->
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 登陆表单 -->
+					<form action="">
+						<div class="form-group">
+							<label for="userId" class="font-weight-bold">用户名</label>
+							<input type="text" class="form-control" id="userId" placeholder="请输入用户名" pattern="[a-zA-z]{6-12}" required>
+						</div>
+						<div class="form-group">
+							<label for="password" class="font-weight-bold">密码</label>
+							<input type="password" class="form-control" id="password" placeholder="请输入密码" pattern="[0-9]{6,}" required>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+					<button type="submit" class="btn btn-primary">登录</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- modal注册模块 -->
+	<div class="modal fade" id="registerPopUp" role="dialog" aria-labelledby="registerPopUp" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 注册表单 -->
+					<form action="">
+						<div class="form-group">
+							<label for="userId" class="font-weight-bold">用户名</label>
+							<input type="text" class="form-control" id="userId" placeholder="请输入用户名">
+						</div>
+						<div class="form-group">
+							<label for="password" class="font-weight-bold">密码</label>
+							<input type="password" class="form-control" id="password" placeholder="请输入密码">
+						</div>
+						<div class="form-group">
+							<label for="password" class="font-weight-bold">确认密码</label>
+							<input type="password" class="form-control" id="password" placeholder="请确认密码">
+						</div>
+						<div class="form-group">
+							<label for="password" class="font-weight-bold">昵称</label>
+							<input type="text" class="form-control" id="text" placeholder="请输入昵称">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+					<button type="submit" class="btn btn-primary">注册</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<article class="blog-info" id="about">
+		<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+			<div class="card-header">Header</div>
+			<div class="card-body">
+				<h5 class="card-title">Dark card title</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+					card's content.</p>
+				<a href="#" class="card-link">Card link</a>
+			</div>
+		</div>
+	</article>
+
+	<footer id="footerInfo">
+		<div class="footerInfo">
+			<i class="fa fa-copyright" aria-hidden="true">后端开发第二组</i>
+		</div>
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+	<script src="JS/login.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>
