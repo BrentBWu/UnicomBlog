@@ -4,15 +4,9 @@ target
 .classpath
 .project
 bin
-LOG_FILE_IS_UNDEFINED
-LOG_FILE_IS_UNDEFINED*
 *null
-*jpg
-Dockerfile
 *jar
 *jar*
 .metadata
 .recommenders
-.settings
-bin
 *.class
