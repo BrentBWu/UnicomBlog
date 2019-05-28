@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  *用户关注表
+ * @author XuetingOu
  */
 public class UserFollow {
     private int fid;//关注标识
