@@ -216,9 +216,6 @@ footer{
     font-size: 2.25rem;
 }
 
-.blog-header-logo:hover {
-    text-decoration: none;
-}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -314,6 +311,18 @@ h1, h2, h3, h4, h5, h6 {
 .blog-post-meta {
     margin-bottom: 1.25rem;
     color: #999;
+}
+
+.jumbotron{
+    background: #c69500;
+}
+
+.inline-title{
+    color:#155d74;
+}
+
+.read-more{
+    border-Radius: 0px;
 }
 
 /*
