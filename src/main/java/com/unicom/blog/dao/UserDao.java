@@ -145,16 +145,17 @@ public class UserDao {
         try {
             connection = JDBCUtils.getConnection();
             //创建SQL语句
-            String sql = "insert into t_user (user_name,user_passwd,create_time,sts,nick_name,head_icon) values(?,?,?,?,?,?)  ";
+            //String sql = "insert into t_user (user_name,user_passwd,create_time,sts,nick_name,head_icon) values(?,?,?,?,?,?)  ";
+            String sql = "insert into t_user (user_name,user_passwd,sts,nick_name,head_icon) values(?,?,?,?,?)  ";
             preparedStatement = connection.prepareStatement(sql);
             //设置参数
             preparedStatement.setString(1, user.getUserName());
             preparedStatement.setString(2, user.getUserPassword());
-            preparedStatement.setTimestamp(3, new Timestamp(user.getCreateTime().getTime()));
+           // preparedStatement.setTimestamp(3, new Timestamp(user.getCreateTime().getTime()));
             //preparedStatement.setTimestamp(3, user.getCreateTime());
-            preparedStatement.setString(4, String.valueOf(user.getSts()));
-            preparedStatement.setString(5, user.getNickName());
-            preparedStatement.setString(6, user.getHead_icon());
+            preparedStatement.setString(3, String.valueOf(user.getSts()));
+            preparedStatement.setString(4,user.getNickName());
+            preparedStatement.setString(5, user.getHead_icon());
             result = preparedStatement.executeUpdate();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
