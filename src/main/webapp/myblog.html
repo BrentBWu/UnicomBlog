@@ -15,36 +15,36 @@
     <link rel="stylesheet" href="CSS/myblog.css" type="text/css">
 </head>
 
-<body >
+<body class="bg-light">
 <!--Navigation-->
 <a class="menu-toggle rounded" href="#">
     <i class="fas fa-bars"></i>
 </a>
 
-<nav id="sidebar-wrapper">
+<nav class="bg-dark" id="sidebar-wrapper">
     <ul class="sidebar-nav">
         <li class="sidebar-brand">
             <a class="js-scroll-trigger" href="#page-top">Unicom Blog</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="login-btn" href="#" data-toggle="modal" data-target="#loginPopUp">用户登陆</a>
+            <a class="js-scroll-trigger" href="#page-main" >文章主页</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="register" href="#" data-toggle="modal" data-target="#registerPopUp">用户注册</a>
+            <a class="js-scroll-trigger" href="#">个人主页</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#about">随便看看</a>
+            <a class="js-scroll-trigger" href="#">关注列表</a>
         </li>
         <!-- <li class="sidebar-nav-item">
                 <a class="js-scroll-trigger" href="#footerInfo">关于我们</a>
             </li> -->
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#footerInfo">版权所有</a>
+            <a class="js-scroll-trigger" href="#foot-info">版权所有</a>
         </li>
     </ul>
 </nav>
 
-<div class="container">
+<div class="container" id="page-top">
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
@@ -111,7 +111,7 @@
     </div>
 </div>
 
-<main role="main" class="container">
+<main role="main" class="container" id="page-main">
     <div class="row">
         <div class="blog-main">
             <h3 class="pb-4 mb-4 font-italic border-bottom">
@@ -210,7 +210,7 @@
 </main><!-- /.container -->
 
 <footer>
-    <div class="footerInfo">
+    <div class="footerInfo" id="foot-info">
         <i class="fa fa-copyright" aria-hidden="true">用户名</i>
     </div>
 </footer>
