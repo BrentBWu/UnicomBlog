@@ -10,9 +10,16 @@
     font-size: 2.25rem;
 }
 
+
+
 .blog-header-logo:hover {
     text-decoration: none;
 }
+
+/*jumbotron*/
+/*.jumbotron{*/
+/*    background: #c69500;*/
+/*}*/
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", Georgia, "Times New Roman", serif;

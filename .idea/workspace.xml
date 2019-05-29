@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/myblog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+            <state relative-caret-position="380">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
             </state>
           </provider>
         </entry>
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/myblog.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="137" column="1" selection-start-line="137" selection-start-column="1" selection-end-line="137" selection-end-column="1" />
+            <state relative-caret-position="420">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -63,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="323" selection-start-line="323" selection-end-line="325" selection-end-column="1" />
+            <state relative-caret-position="425">
+              <caret line="316" column="23" selection-start-line="316" selection-start-column="17" selection-end-line="316" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -209,6 +209,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="Img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UnicomBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UnicomBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -282,7 +290,7 @@
       <workItem from="1558957199056" duration="4734000" />
       <workItem from="1559014838862" duration="695000" />
       <workItem from="1559112285451" duration="1844000" />
-      <workItem from="1559120831642" duration="1145000" />
+      <workItem from="1559120831642" duration="3544000" />
     </task>
     <task id="LOCAL-00001" summary="注释">
       <created>1558957490651</created>
@@ -305,23 +313,30 @@
       <option name="project" value="LOCAL" />
       <updated>1559034401998</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="myblog feature update">
+      <created>1559122073410</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559122073411</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17816000" />
+    <option name="totallyTimeSpent" value="20215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Learn" order="0" />
+      <window_info id="Learn" order="0" weight="0.3295302" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" weight="0.103355706" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.103355706" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -390,7 +405,8 @@
     <MESSAGE value="注释" />
     <MESSAGE value="beans" />
     <MESSAGE value="new branch frontend-myblog" />
-    <option name="LAST_COMMIT_MESSAGE" value="new branch frontend-myblog" />
+    <MESSAGE value="myblog feature update" />
+    <option name="LAST_COMMIT_MESSAGE" value="myblog feature update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -625,17 +641,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/myblog.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Blog Template · Bootstrap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" selection-start-line="20" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Blog Template · Bootstrap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" selection-start-line="20" selection-end-line="33" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -653,22 +669,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="323" selection-start-line="323" selection-end-line="325" selection-end-column="1" />
+        <state relative-caret-position="425">
+          <caret line="316" column="23" selection-start-line="316" selection-start-column="17" selection-end-line="316" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/myblog.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="137" column="1" selection-start-line="137" selection-start-column="1" selection-end-line="137" selection-end-column="1" />
+        <state relative-caret-position="420">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/myblog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+        <state relative-caret-position="380">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
