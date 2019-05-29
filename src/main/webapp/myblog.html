@@ -15,7 +15,35 @@
     <link rel="stylesheet" href="CSS/myblog.css" type="text/css">
 </head>
 
-<body data-gr-c-s-loaded="true">
+<body >
+<!--Navigation-->
+<a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+</a>
+
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a class="js-scroll-trigger" href="#page-top">Unicom Blog</a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="login-btn" href="#" data-toggle="modal" data-target="#loginPopUp">用户登陆</a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="register" href="#" data-toggle="modal" data-target="#registerPopUp">用户注册</a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="#about">随便看看</a>
+        </li>
+        <!-- <li class="sidebar-nav-item">
+                <a class="js-scroll-trigger" href="#footerInfo">关于我们</a>
+            </li> -->
+        <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="#footerInfo">版权所有</a>
+        </li>
+    </ul>
+</nav>
+
 <div class="container">
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
@@ -196,7 +224,7 @@
 
 <!-- Plugin JavaScript -->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src="myblog.js" type="text/javascript" charset="utf-8"></script>
+<script src="JS/myblog.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>

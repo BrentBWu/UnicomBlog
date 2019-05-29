@@ -4,6 +4,8 @@
     <list default="true" id="54043a24-a63d-4bb5-9f9b-99599b97e493" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/CSS/myblog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/CSS/myblog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JS/myblog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JS/myblog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/myblog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/myblog.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,29 +21,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/myblog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="3220">
+              <caret line="226" column="16" selection-start-line="226" selection-start-column="16" selection-end-line="226" selection-end-column="16" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/myblog.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1400">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/myblog.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state relative-caret-position="465">
+              <caret line="162" selection-start-line="162" selection-end-line="162" />
             </state>
           </provider>
         </entry>
@@ -49,11 +54,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="202" column="10" lean-forward="true" selection-start-line="202" selection-start-column="10" selection-end-line="202" selection-end-column="10" />
+            <state relative-caret-position="63">
+              <caret line="146" column="40" lean-forward="true" selection-start-line="146" selection-start-column="40" selection-end-line="146" selection-end-column="40" />
               <folding>
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
@@ -61,17 +64,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/login.css">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="316" column="23" selection-start-line="316" selection-start-column="17" selection-end-line="316" selection-end-column="23" />
+            <state relative-caret-position="171">
+              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/myblog.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/login.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-895">
+              <caret line="256" column="1" lean-forward="true" selection-start-line="256" selection-start-column="1" selection-end-line="256" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -114,8 +121,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/UserFollow.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/utils/UserDaoUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/utils/JDBCUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/CSS/myblog.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/myblog.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JS/myblog.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/CSS/myblog.css" />
       </list>
     </option>
   </component>
@@ -150,8 +159,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -210,6 +219,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="Img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UnicomBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UnicomBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UnicomBlog" type="b2602c69:ProjectViewProjectNode" />
@@ -290,7 +307,7 @@
       <workItem from="1558957199056" duration="4734000" />
       <workItem from="1559014838862" duration="695000" />
       <workItem from="1559112285451" duration="1844000" />
-      <workItem from="1559120831642" duration="3544000" />
+      <workItem from="1559120831642" duration="7399000" />
     </task>
     <task id="LOCAL-00001" summary="注释">
       <created>1558957490651</created>
@@ -320,11 +337,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559122073411</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="myblog feature update for jumbotron bg color">
+      <created>1559125986461</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1559125986461</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20215000" />
+    <option name="totallyTimeSpent" value="24070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -336,7 +360,7 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.103355706" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.046979867" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -406,7 +430,8 @@
     <MESSAGE value="beans" />
     <MESSAGE value="new branch frontend-myblog" />
     <MESSAGE value="myblog feature update" />
-    <option name="LAST_COMMIT_MESSAGE" value="myblog feature update" />
+    <MESSAGE value="myblog feature update for jumbotron bg color" />
+    <option name="LAST_COMMIT_MESSAGE" value="myblog feature update for jumbotron bg color" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -621,13 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -638,8 +656,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/myblog.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$USER_HOME$/Desktop/Blog Template · Bootstrap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" selection-start-line="20" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -648,20 +670,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Blog Template · Bootstrap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" selection-start-line="20" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="202" column="10" lean-forward="true" selection-start-line="202" selection-start-column="10" selection-end-line="202" selection-end-column="10" />
+        <state relative-caret-position="63">
+          <caret line="146" column="40" lean-forward="true" selection-start-line="146" selection-start-column="40" selection-end-line="146" selection-end-column="40" />
           <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
@@ -669,22 +682,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="316" column="23" selection-start-line="316" selection-start-column="17" selection-end-line="316" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/myblog.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="-895">
+          <caret line="256" column="1" lean-forward="true" selection-start-line="256" selection-start-column="1" selection-end-line="256" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/myblog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="3220">
+          <caret line="226" column="16" selection-start-line="226" selection-start-column="16" selection-end-line="226" selection-end-column="16" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/myblog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/myblog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
         </state>
       </provider>
     </entry>
