@@ -217,6 +217,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/*like icon*/
+.btn-like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
 footer {
     height: 150px;
     background: #424546;
