@@ -164,6 +164,35 @@ public class UserDao {
         }
         return result;
 
+    }
+/*
+*  test
+* */
+    //用户头像修改
+    public static int userIconModify(User user){
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        int result=0;
+        try {
+            connection = JDBCUtils.getConnection();
+            //创建SQL语句
+   //String sql = "update t_user set head_icon = '.../src\main\webapp\Img\Icon/png1' where user_name = 'xx';";
+            String sql = "update t_user set head_icon = ? where user_name = ?;";
+            preparedStatement = connection.prepareStatement(sql);
+            //设置参数
+            preparedStatement.setString(1, user.getHead_icon());
+            preparedStatement.setString(2, user.getUserName());
+// executeUpdate 的返回值是一个整数（int），指示受影响的行数（即更新计数）。
+            result = preparedStatement.executeUpdate();
+ //  对于 CREATE 或 DROP 等不操作行的语句，executeUpdate 的返回值总为零
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            JDBCUtils.release(null,connection);
+        }
+        return result;
+
 
     }
 }
