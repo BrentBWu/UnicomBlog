@@ -112,14 +112,14 @@
             </div>
             <div class="modal-body">
                 <!-- 注册表单 -->
-                <form action="">
+                <form action="<%=basePath%>/RegistServlet" method="get">
                     <div class="form-group">
                         <label for="userId" class="font-weight-bold">用户名</label>
-                        <input type="text" class="form-control" id="userId" placeholder="请输入用户名">
+                        <input type="text" class="form-control" id="userId" name="username" placeholder="请输入用户名">
                     </div>
                     <div class="form-group">
                         <label class="font-weight-bold">密码</label>
-                        <input type="password" class="form-control" id="pwd"  placeholder="请输入密码">
+                        <input type="password" class="form-control" id="pwd" name="password"  placeholder="请输入密码">
                     </div>
                     <div class="form-group">
                         <label class="font-weight-bold">确认密码</label>
@@ -127,7 +127,7 @@
                     </div>
                     <div class="form-group">
                         <label class="font-weight-bold">昵称</label>
-                        <input type="text" class="form-control" id="text" placeholder="请输入昵称">
+                        <input type="text" class="form-control" id="text" name="nickname" placeholder="请输入昵称">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
