@@ -35,6 +35,7 @@ public class UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        JDBCUtils.release(resultSet,preparedStatement,connection);
         return flag;
     }
     //根据昵称检查重名
@@ -61,7 +62,7 @@ public class UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        JDBCUtils.release(resultSet,preparedStatement,connection);
         return flag;
     }
 
@@ -98,6 +99,7 @@ public class UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        JDBCUtils.release(resultSet,preparedStatement,connection);
         return user;
     }
 
@@ -133,6 +135,7 @@ public class UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        JDBCUtils.release(resultSet,preparedStatement,connection);
         return user;
     }
 
@@ -140,7 +143,6 @@ public class UserDao {
     public static int userRegister(User user){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
         int result=0;
         try {
             connection = JDBCUtils.getConnection();
@@ -162,8 +164,82 @@ public class UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        JDBCUtils.release(preparedStatement,connection);
         return result;
 
 
+    }
+
+    //修改密码
+    public static int updatePassword(int uid,String password){
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        int result=0;
+        try {
+            connection = JDBCUtils.getConnection();
+            //创建SQL语句
+            String sql = "update t_user set user_passwd=? where uid=?";
+            preparedStatement = connection.prepareStatement(sql);
+            //设置参数
+            preparedStatement.setString(1, password);
+            preparedStatement.setInt(2,uid);
+            result = preparedStatement.executeUpdate();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        JDBCUtils.release(preparedStatement,connection);
+        return result;
+
+    }
+
+    //修改昵称
+    public static int updateNickName(int uid,String nickname){
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        int result=0;
+        try {
+            connection = JDBCUtils.getConnection();
+            //创建SQL语句
+            String sql = "update t_user set nick_name=? where uid=?";
+            preparedStatement = connection.prepareStatement(sql);
+            //设置参数
+            preparedStatement.setString(1, nickname);
+            preparedStatement.setInt(2,uid);
+            result = preparedStatement.executeUpdate();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        JDBCUtils.release(preparedStatement,connection);
+        return result;
+    }
+
+    //关注用户
+    public static int followUser(int uid,int followeduid){
+        int result=0;
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            connection = JDBCUtils.getConnection();
+            //创建SQL语句
+            String sql = "insert into t_user_follow (uid,followed_uid,sts) values (?,?,?)";
+            preparedStatement = connection.prepareStatement(sql);
+            //设置参数
+            preparedStatement.setInt(1, uid);
+            preparedStatement.setInt(2,followeduid);
+            preparedStatement.setString(3, "N");
+            result = preparedStatement.executeUpdate();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        JDBCUtils.release(preparedStatement,connection);
+        return result;
     }
 }

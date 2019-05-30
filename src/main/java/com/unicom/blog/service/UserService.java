@@ -100,4 +100,59 @@ public class UserService {
     }
 
 
+    //修改密码
+    public static Result<Boolean> updatePassword(int uid,String password){
+        int res=UserDao.updatePassword(uid,password);
+        Result<Boolean> result=new Result<Boolean>();
+        if(res==1){
+            //注册成功
+            result.setRespCode("0000");
+            result.setRespDesc("密码修改成功");
+            result.setRespData(true);
+        }else{
+            //注册失败
+            result.setRespCode("0001");
+            result.setRespDesc("密码修改失败");
+            result.setRespData(false);
+        }
+        return result;
+    }
+
+    //修改昵称
+    public static Result<Boolean> updateNickName(int uid,String nickname){
+        int res=UserDao.updateNickName(uid,nickname);
+        Result<Boolean> result=new Result<Boolean>();
+        if(res==1){
+            //注册成功
+            result.setRespCode("0000");
+            result.setRespDesc("昵称修改成功");
+            result.setRespData(true);
+        }else{
+            //注册失败
+            result.setRespCode("0001");
+            result.setRespDesc("昵称修改失败");
+            result.setRespData(false);
+        }
+        return result;
+    }
+
+    //关注用户
+    public static Result<Boolean> followUser(int uid,int followeduid){
+        int res=UserDao.followUser(uid,followeduid);
+        Result<Boolean> result=new Result<Boolean>();
+        if(res==1){
+            //关注成功
+            result.setRespCode("0000");
+            result.setRespDesc("关注成功");
+            result.setRespData(true);
+        }else{
+            //关注失败
+            result.setRespCode("0001");
+            result.setRespDesc("关注失败");
+            result.setRespData(false);
+        }
+        return result;
+    }
+
+
 }
