@@ -67,3 +67,18 @@ var onMapClickHandler = function(event) {
 // Enable map zooming with mouse scroll when the user clicks the map
 $('.map').on('click', onMapClickHandler);
 
+// function pwdVlidator() {
+//   var pwd1 = document.getElementById("pwd").value;
+//   var pwd2 = document.getElementById("pwd1").value;
+//
+//   if (pwd1 == pwd2){
+//     document.getElementById("register-btn").disabled = false;
+//   }else {
+//     document.getElementById("register-btn").disabled = true;
+//     document.getElementById("password-warning").innerHTML = "<div class=\"alert alert-dark\" role=\"alert\">\n" +
+//         "  两次输入的密码不同\n" +
+//         "</div>";
+//   }
+//
+// }
+
