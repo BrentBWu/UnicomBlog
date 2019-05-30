@@ -123,16 +123,15 @@
                     </div>
                     <div class="form-group">
                         <label class="font-weight-bold">确认密码</label>
-                        <input type="password" class="form-control" id="pwd1" placeholder="请确认密码" onkeyup="pwdVlidator()">
+                        <input type="password" class="form-control" id="pwd1" placeholder="请确认密码" onkeypress="pwdRecover()">
                     </div>
-                    <span id="password-warning"></span>
                     <div class="form-group">
                         <label class="font-weight-bold">昵称</label>
                         <input type="text" class="form-control" id="text" placeholder="请输入昵称">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
-                        <button type="submit" class="btn btn-primary" id="register-btn">注册</button>
+                        <button type="submit" class="btn btn-primary" id="register-btn" onmouseover="pwdVlidator()">注册</button>
                     </div>
                 </form>
             </div>
