@@ -9,7 +9,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.unicom.blog.VO.UserBlogVo;
+import com.unicom.blog.VO.UserBlogVO;
 import com.unicom.blog.beans.Result;
 import com.unicom.blog.utils.JDBCUtils;
 import com.unicom.blog.utils.RespCode;
@@ -160,9 +160,9 @@ public class BlogService {
 	 * 首页热点文章列表查询  按点赞数量排序
 	 * @return
 	 */
-	public Result<List<UserBlogVo>> qryHighlightBlogList(){
-		Result<List<UserBlogVo>> result = new Result<>();
-		List<UserBlogVo> userBlogVoList = new LinkedList<UserBlogVo>();
+	public Result<List<UserBlogVO>> qryHighlightBlogList(){
+		Result<List<UserBlogVO>> result = new Result<>();
+		List<UserBlogVO> userBlogVoList = new LinkedList<UserBlogVO>();
 		try {
 			    Connection conn = JDBCUtils.getConnection();
 			    
@@ -174,7 +174,7 @@ public class BlogService {
 		    	Boolean isHasData  = false;
 		    	while(rs.next()){	
 		    		isHasData = true;
-		    		UserBlogVo userBlogVo =new UserBlogVo();
+		    		UserBlogVO userBlogVo =new UserBlogVO();
 		    		userBlogVo.setBid(rs.getInt("bid"));
 		    		userBlogVo.setCollectionCount(rs.getInt("collections_count"));
 		    		userBlogVo.setCommentsCount(rs.getInt("comments_count"));
@@ -225,9 +225,9 @@ public class BlogService {
 	 * @param uid
 	 * @return
 	 */
-	public Result<List<UserBlogVo>> qryUserBlogList(final Integer uid){
-		Result<List<UserBlogVo>> result = new Result<>();
-		List<UserBlogVo> userBlogVoList = new LinkedList<UserBlogVo>();
+	public Result<List<UserBlogVO>> qryUserBlogList(final Integer uid){
+		Result<List<UserBlogVO>> result = new Result<>();
+		List<UserBlogVO> userBlogVoList = new LinkedList<UserBlogVO>();
 		try {
 			    Connection conn = JDBCUtils.getConnection();
 			    
@@ -240,7 +240,7 @@ public class BlogService {
 		    	Boolean isHasData  = false;
 		    	while(rs.next()){	
 		    		isHasData = true;
-		    		UserBlogVo userBlogVo =new UserBlogVo();
+		    		UserBlogVO userBlogVo =new UserBlogVO();
 		    		userBlogVo.setBid(rs.getInt("bid"));
 		    		userBlogVo.setCollectionCount(rs.getInt("collections_count"));
 		    		userBlogVo.setCommentsCount(rs.getInt("comments_count"));
@@ -289,9 +289,9 @@ public class BlogService {
 	 * @param uid
 	 * @return
 	 */
-	public Result<List<UserBlogVo>> qryUserLikeBlogList(final Integer uid){
-		Result<List<UserBlogVo>> result = new Result<>();
-		List<UserBlogVo> userBlogVoList = new LinkedList<UserBlogVo>();
+	public Result<List<UserBlogVO>> qryUserLikeBlogList(final Integer uid){
+		Result<List<UserBlogVO>> result = new Result<>();
+		List<UserBlogVO> userBlogVoList = new LinkedList<UserBlogVO>();
 		try {
 			    Connection conn = JDBCUtils.getConnection();
 			    
@@ -305,7 +305,7 @@ public class BlogService {
 		    	Boolean isHasData  = false;
 		    	while(rs.next()){	
 		    		isHasData = true;
-		    		UserBlogVo userBlogVo =new UserBlogVo();
+		    		UserBlogVO userBlogVo =new UserBlogVO();
 		    		userBlogVo.setBid(rs.getInt("bid"));
 		    		userBlogVo.setCollectionCount(rs.getInt("collections_count"));
 		    		userBlogVo.setCommentsCount(rs.getInt("comments_count"));
@@ -353,9 +353,9 @@ public class BlogService {
 	 * @param uid
 	 * @return
 	 */
-	public Result<List<UserBlogVo>> qryUserCollectBlogList(final Integer uid){
-		Result<List<UserBlogVo>> result = new Result<>();
-		List<UserBlogVo> userBlogVoList = new LinkedList<UserBlogVo>();
+	public Result<List<UserBlogVO>> qryUserCollectBlogList(final Integer uid){
+		Result<List<UserBlogVO>> result = new Result<>();
+		List<UserBlogVO> userBlogVoList = new LinkedList<UserBlogVO>();
 		try {
 			    Connection conn = JDBCUtils.getConnection();
 			    
@@ -369,7 +369,7 @@ public class BlogService {
 		    	Boolean isHasData  = false;
 		    	while(rs.next()){	
 		    		isHasData = true;
-		    		UserBlogVo userBlogVo =new UserBlogVo();
+		    		UserBlogVO userBlogVo =new UserBlogVO();
 		    		userBlogVo.setBid(rs.getInt("bid"));
 		    		userBlogVo.setCollectionCount(rs.getInt("collections_count"));
 		    		userBlogVo.setCommentsCount(rs.getInt("comments_count"));
@@ -419,9 +419,9 @@ public class BlogService {
 	 * @param keyword
 	 * @return
 	 */
-	public Result<List<UserBlogVo>> qryBlogListByKeyword(final String keyword){
-		Result<List<UserBlogVo>> result = new Result<>();
-		List<UserBlogVo> userBlogVoList = new LinkedList<UserBlogVo>();
+	public Result<List<UserBlogVO>> qryBlogListByKeyword(final String keyword){
+		Result<List<UserBlogVO>> result = new Result<>();
+		List<UserBlogVO> userBlogVoList = new LinkedList<UserBlogVO>();
 		try {
 			    Connection conn = JDBCUtils.getConnection();
 			    
@@ -434,7 +434,7 @@ public class BlogService {
 		    	Boolean isHasData  = false;
 		    	while(rs.next()){	
 		    		isHasData = true;
-		    		UserBlogVo userBlogVo =new UserBlogVo();
+		    		UserBlogVO userBlogVo =new UserBlogVO();
 		    		userBlogVo.setBid(rs.getInt("bid"));
 		    		userBlogVo.setCollectionCount(rs.getInt("collections_count"));
 		    		userBlogVo.setCommentsCount(rs.getInt("comments_count"));
@@ -483,9 +483,9 @@ public class BlogService {
 	 * @param bid
 	 * @return
 	 */
-	public Result<UserBlogVo> getBlogFullContent(final Integer bid){
-		Result<UserBlogVo> result = new Result<>();
-		UserBlogVo userBlogVo =new UserBlogVo();
+	public Result<UserBlogVO> getBlogFullContent(final Integer bid){
+		Result<UserBlogVO> result = new Result<>();
+		UserBlogVO userBlogVo =new UserBlogVO();
 		try {
 			    Connection conn = JDBCUtils.getConnection();
 			    

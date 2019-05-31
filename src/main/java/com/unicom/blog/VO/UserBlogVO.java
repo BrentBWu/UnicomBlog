@@ -7,7 +7,7 @@ import java.util.List;
  * @author Administrator
  *
  */
-public class UserBlogVo {
+public class UserBlogVO {
 	
 	private int bid;//文章标识
 	private int uid;//文章作者
@@ -20,12 +20,12 @@ public class UserBlogVo {
     private int collectionCount;//收藏数
     private String nickName;//用户名
     private String head_icon;//用户头像
-    private List<UserCommentVo> userCommentVoList; // 文章评论
+    private List<UserCommentVO> userCommentVoList; // 文章评论
     
-	public List<UserCommentVo> getUserCommentVoList() {
+	public List<UserCommentVO> getUserCommentVoList() {
 		return userCommentVoList;
 	}
-	public void setUserCommentVoList(List<UserCommentVo> userCommentVoList) {
+	public void setUserCommentVoList(List<UserCommentVO> userCommentVoList) {
 		this.userCommentVoList = userCommentVoList;
 	}
 	public int getBid() {

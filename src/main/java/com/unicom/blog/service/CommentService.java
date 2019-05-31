@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.unicom.blog.VO.UserCommentVo;
+import com.unicom.blog.VO.UserCommentVO;
 import com.unicom.blog.beans.Result;
 import com.unicom.blog.utils.JDBCUtils;
 import com.unicom.blog.utils.RespCode;
@@ -20,6 +20,13 @@ import com.unicom.blog.utils.RespCode;
  */
 public class CommentService {
 
+	/**
+	 * 文章评论
+	 * @param uid
+	 * @param bid
+	 * @param content
+	 * @return
+	 */
 	public Result<String> commentBlog(final Integer uid, final Integer bid, final String content){
 	
 		Result<String> result = new Result<>();
@@ -68,10 +75,10 @@ public class CommentService {
 	 * @param bid
 	 * @return
 	 */
-	public Result<List<UserCommentVo>> qryBlogCommentList(final Integer bid){
+	public Result<List<UserCommentVO>> qryBlogCommentList(final Integer bid){
 	
-		Result<List<UserCommentVo>> result = new Result<>();
-		List<UserCommentVo> UserCommentVoList = new LinkedList<UserCommentVo>();
+		Result<List<UserCommentVO>> result = new Result<>();
+		List<UserCommentVO> UserCommentVoList = new LinkedList<UserCommentVO>();
 		try {
 			    Connection conn = JDBCUtils.getConnection();
 			   
@@ -85,7 +92,7 @@ public class CommentService {
 		    	Boolean isHasData  = false;
 		    	while(rs.next()){	
 		    		isHasData = true;
-		    		UserCommentVo userCommentVo =new UserCommentVo();
+		    		UserCommentVO userCommentVo =new UserCommentVO();
 		    		userCommentVo.setContent(rs.getString("content"));
 		    		userCommentVo.setCreateDate(rs.getDate("create_time"));
 		    		userCommentVo.setFloorNum(rs.getInt("floor_num"));

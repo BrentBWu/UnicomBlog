@@ -7,7 +7,7 @@ import java.util.List;
  * @author Administrator
  *
  */
-public class UserCommentVo {
+public class UserCommentVO {
 
 	private int uid;//用户标识
 	private String nickName;//用户昵称
@@ -15,7 +15,7 @@ public class UserCommentVo {
     private String content;//评论内容
 	private Date createDate;//评论时间
 	private int floorNum;//评论楼层	
-	public UserCommentVo(int uid, String nickName, String head_icon, String content, Date createDate, int floorNum){
+	public UserCommentVO(int uid, String nickName, String head_icon, String content, Date createDate, int floorNum){
 		this.uid = uid;
 		this.nickName = nickName;
 		this.head_icon = head_icon;
@@ -25,7 +25,7 @@ public class UserCommentVo {
 		
 	}
 	
-	public UserCommentVo(){
+	public UserCommentVO(){
 		
 	}
 	public int getUid() {
