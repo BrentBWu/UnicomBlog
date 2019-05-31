@@ -28,17 +28,8 @@
 </head>
 <body data-gr-c-s-loaded="true">
 <header>
-    <div class="bg-dark collapse" id="navbarHeader">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-md-7 py-4">
-                </div>
-                <div class="col-sm-4 offset-md-1 py-4">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="navbar navbar-dark bg-warning shadow-sm">
+
+    <div class="navbar navbar-dark bg-warning">
         <div class="container d-flex justify-content-between">
             <a href="#" class="navbar-brand d-flex align-items-center text-dark">
                 <strong>Unicom Blog.</strong>
@@ -48,23 +39,44 @@
             </button>
         </div>
     </div>
+    <div class="bg-warning collapse" id="navbarHeader">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center changer-form">
+                <form action="#" method="get">
+                    <div class="form-group">
+                        <label class="font-weight-bold text-dark font-weight-bold">密码</label>
+                        <input type="password" class="form-control" id="pwd" name="password"  placeholder="请输入密码">
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold text-dark font-weight-bold">确认密码</label>
+                        <input type="password" class="form-control" id="pwd1" placeholder="请确认密码" onkeypress="pwdRecover()">
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold text-dark font-weight-bold">昵称</label>
+                        <input type="text" class="form-control" id="text" name="nickname" placeholder="请输入昵称">
+                        <button type="submit" class="btn btn-dark font-weight-bold changer-footer" id="register-btn" onmouseover="pwdVlidator()">确认修改</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </header>
 
 <main role="main">
 
-    <section class="jumbotron">
-        <div class="container d-flex justify-content-center align-items-center">
-            <div class="btn btn-dark userImg"><a href="#"><img src="Img/userImg.png" alt=""></a></div>
+    <section class="jumbotron bg-dark shadow-sm">
+        <div class="container d-flex justify-content-center align-items-center bg-dark">
+            <div class="btn btn-warning userImg"><a href="#"><img src="Img/userImg.png" alt=""></a></div>
         </div>
-        <div class="container text-center user-info">
-                <div class="user-username text-dark font-weight-bold">用户名：userIsMe</div>
-                <div class="user-nickname text-dark font-weight-bold">昵称：咕达子是天才</div>
+        <div class="container text-center user-info bg-dark">
+                <div class="user-username text-light ">用户名：userIsMe</div>
+                <div class="user-nickname text-light ">昵称：咕达子是天才</div>
         </div>
     </section>
 
-    <div class="album py-5 bg-light">
+    <div class="album py-5 bg-light myblogs">
         <div class="container">
-
+            <div class="text-dark font-weight-bold myblogstitle">我的文章</div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
@@ -200,13 +212,9 @@
 
 </main>
 
-<footer class="text-muted">
-    <div class="container">
-        <p class="float-right">
-            <a href="https://getbootstrap.com/docs/4.3/examples/album/#">Back to top</a>
-        </p>
-        <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">getting started guide</a>.</p>
+<footer class="bg-dark">
+    <div class="footerInfo" id="foot-info">
+        <i class="fa fa-copyright" aria-hidden="true">用户名</i>
     </div>
 </footer>
 <!-- Bootstrap core JavaScript -->

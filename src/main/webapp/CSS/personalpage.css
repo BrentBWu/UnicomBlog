@@ -20,9 +20,9 @@
 }
 
 .userImg{
-    width: 110px;
-    height: 110px;
-    border-Radius: 55px;
+    width: 106px;
+    height: 106px;
+    border-Radius: 53px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,4 +43,44 @@
     font-family: "微软雅黑";
     font-size: 15px;
     height: 30px;
+}
+
+.jumbotron{
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    font-family: "微软雅黑";
+}
+
+.changer-footer{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.changer-form{
+    padding-top: 20px;
+}
+
+.changer-form>form{
+    font-family: "微软雅黑";
+}
+
+.myblogs{
+    font-family: "微软雅黑";
+}
+
+.myblogstitle{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/*
+ * Footer
+ */
+
+footer {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
 }
