@@ -22,33 +22,6 @@
     <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
 
-  <servlet>
-    <servlet-name>UpdatePasswordServlet</servlet-name>
-    <servlet-class>com.unicom.blog.servlet.UpdatePasswordServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>UpdatePasswordServlet</servlet-name>
-    <url-pattern>/UpdatePasswordServlet</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
-    <servlet-name>UpdateNickNameServlet</servlet-name>
-    <servlet-class>com.unicom.blog.servlet.UpdateNickNameServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>UpdateNickNameServlet</servlet-name>
-    <url-pattern>/UpdateNickNameServlet</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
-    <servlet-name>FollowUserServlet</servlet-name>
-    <servlet-class>com.unicom.blog.servlet.FollowUserServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>FollowUserServlet</servlet-name>
-    <url-pattern>/FollowUserServlet</url-pattern>
-  </servlet-mapping>
-
 </web-app>
 
 

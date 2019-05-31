@@ -17,6 +17,7 @@ import java.io.IOException;
  */
 @WebServlet(name = "LoginServlet")
 public class LoginServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
@@ -32,12 +33,12 @@ public class LoginServlet extends HttpServlet {
             user=result.getRespData();
             session.setAttribute("user", user);
             //跳首页
-            request.getRequestDispatcher("#").forward(request,response);
+            request.getRequestDispatcher("myblog.jsp").forward(request,response);
         }else{
             //登陆失败
             request.setAttribute("respDesc","用户名或密码错误");
             //跳登陆
-            request.getRequestDispatcher("#").forward(request,response);
+            request.getRequestDispatcher("index.jsp").forward(request,response);
         }
     }
 }

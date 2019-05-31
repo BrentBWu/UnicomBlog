@@ -28,26 +28,26 @@ public class RegistServlet extends HttpServlet {
         String nickname=request.getParameter("nickname");
         User user;
         //检测用户名重复
-        //System.out.println("检测用户名重复");
+        System.out.println("检测用户名重复");
         Result<Boolean> result= UserService.userNameCkeck(username);
         Result<Boolean> result2= null;
         if(username.length()<6 || username.length()>12){
             //用户名长度不符
             request.setAttribute("respDesc","用户名长度不符");
-            //System.out.println("用户名长度不符");
+            System.out.println("用户名长度不符");
             //跳注册
             request.getRequestDispatcher("#").forward(request,response);
 
         }else if(password.length()<6 || password.length()>20){
             //密码长度不符
             request.setAttribute("respDesc","密码长度不符");
-            //System.out.println("密码长度不符");
+            System.out.println("密码长度不符");
             //跳注册
             request.getRequestDispatcher("#").forward(request,response);
         }else if(!result.getRespData()){
             //用户名重复
             request.setAttribute("respDesc","用户名重复");
-            //System.out.println("用户名重复");
+            System.out.println("用户名重复");
             //跳注册
             request.getRequestDispatcher("#").forward(request,response);
 
@@ -57,13 +57,13 @@ public class RegistServlet extends HttpServlet {
             result2=UserService.userRegister(user);
             if(result2.getRespCode().equals("0000")){
                 //注册成功
-                //System.out.println("注册成功");
+                System.out.println("注册成功");
                 //跳登陆
-                request.getRequestDispatcher("#").forward(request,response);
+                request.getRequestDispatcher("index.jsp").forward(request,response);
             }else{
                 //注册失败
                 request.setAttribute("respDesc","注册失败");
-                //System.out.println("注册失败");
+                System.out.println("注册失败");
                 //跳注册
                 request.getRequestDispatcher("#").forward(request,response);
             }
