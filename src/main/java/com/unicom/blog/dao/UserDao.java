@@ -4,6 +4,8 @@ import com.unicom.blog.beans.User;
 import com.unicom.blog.utils.JDBCUtils;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *用户DAO
@@ -241,5 +243,42 @@ public class UserDao {
         }
         JDBCUtils.release(preparedStatement,connection);
         return result;
+    }
+
+    //获取关注用户列表
+    public static List<User> followUserList(int uid){
+        ResultSet resultSet = null;
+        List<User> userlist=new ArrayList<User>();
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            connection = JDBCUtils.getConnection();
+            //创建SQL语句
+            String sql = "select * from t_user where uid in(SELECT followed_uid from t_user_follow WHERE uid=?)";
+            preparedStatement = connection.prepareStatement(sql);
+            //设置参数
+            preparedStatement.setInt(1, uid);
+            resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()){
+                User user=new User();
+                user.setUid(resultSet.getInt("uid"));
+                user.setNickName(resultSet.getString("nick_name"));
+                user.setCreateTime(resultSet.getTimestamp("create_time"));
+                user.setHead_icon(resultSet.getString("head_icon"));
+                user.setSts(resultSet.getString("sts").charAt(0));
+                //user.setUserPassword(resultSet.getString("user_passwd"));//不传密码
+                user.setUserName(resultSet.getString("user_name"));
+                userlist.add(user);
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        JDBCUtils.release(resultSet,preparedStatement,connection);
+        return userlist;
+
+
     }
 }

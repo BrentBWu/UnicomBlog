@@ -3,6 +3,9 @@ package com.unicom.blog.service;
 import com.unicom.blog.beans.Result;
 import com.unicom.blog.beans.User;
 import com.unicom.blog.dao.UserDao;
+
+import java.util.List;
+
 /**
  *用户服务接口
  * @author 王思诚
@@ -150,6 +153,20 @@ public class UserService {
             result.setRespCode("0001");
             result.setRespDesc("关注失败");
             result.setRespData(false);
+        }
+        return result;
+    }
+
+    //获取关注用户列表
+    public static Result<List<User>> followUserList(int uid){
+        List<User> res=UserDao.followUserList(uid);
+        Result<List<User>> result=new Result<List<User>>();
+        result.setRespCode("0000");
+        result.setRespDesc("获取关注列表成功");
+        result.setRespData(res);
+        for(int i=0;i<res.size();i++){
+            User user=res.get(i);
+            System.out.println("name="+user.getUserName()+",pass="+user.getUserPassword()+",nickname="+user.getNickName()+",sts="+user.getSts()+",uid="+user.getUid()+",head="+user.getHead_icon()+",time="+user.getCreateTime());
         }
         return result;
     }
