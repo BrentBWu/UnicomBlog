@@ -1,12 +1,12 @@
 package com.unicom.blog.beans;
 
-
 import java.util.Date;
 
 /**
  * 用户
  */
 public class User {
+
     private int uid;//用户标识
     private String userName;//用户名
     private String userPassword;//密码
@@ -15,11 +15,12 @@ public class User {
     private String nickName;//用户昵称
     private String head_icon;//用户头像
 
-    public User(){
+    public User() {
 
     }
 
-    public User(int uid, String userName, String userPassword, Date createTime, char sts, String nickName, String head_icon) {
+    public User(int uid, String userName, String userPassword, Date createTime, char sts, String nickName,
+            String head_icon) {
         this.uid = uid;
         this.userName = userName;
         this.userPassword = userPassword;
