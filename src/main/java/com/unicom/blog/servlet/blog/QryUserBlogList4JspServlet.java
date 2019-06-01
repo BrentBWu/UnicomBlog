@@ -2,8 +2,6 @@ package com.unicom.blog.servlet.blog;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
-
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,10 +34,11 @@ public class QryUserBlogList4JspServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+
         Result<List<UserBlogVO>> result = new Result<>();
         try {
             Integer uid = null;
-            String sUid = Optional.ofNullable(request.getParameter("uid")).orElse(StringUtils.EMPTY);
+            String sUid = request.getParameter("uid");
             if(StringUtils.isEmpty(sUid)) {
                 result.setRespCode(RespCode.FAIL_CODE);
                 result.setRespDesc("字段不能为空！");
@@ -57,9 +56,10 @@ public class QryUserBlogList4JspServlet extends HttpServlet {
         }
         request.setAttribute("respCode", result.getRespCode());
         request.setAttribute("respDesc", result.getRespDesc());
-        request.setAttribute("respData", result.getRespData());
+        request.setAttribute("UserBlogList", result.getRespData());
+        System.out.println(request.getAttribute("collectionBolgList"));
         try {
-            request.getRequestDispatcher("").forward(request, response);
+            request.getRequestDispatcher("personalpage.jsp").forward(request, response);
         } catch(Exception e) {
             result.setRespCode(RespCode.FAIL_CODE);
             result.setRespDesc("服务器转发错误" + e.getMessage());

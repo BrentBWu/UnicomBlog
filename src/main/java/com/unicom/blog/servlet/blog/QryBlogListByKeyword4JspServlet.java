@@ -2,8 +2,6 @@ package com.unicom.blog.servlet.blog;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
-
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,7 +36,7 @@ public class QryBlogListByKeyword4JspServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         Result<List<UserBlogVO>> result = new Result<>();
         try {
-            String keyword = Optional.ofNullable(request.getParameter("keyword")).orElse(StringUtils.EMPTY);
+            String keyword = request.getParameter("keyword");
             if(StringUtils.isEmpty(keyword)) {
                 result.setRespCode(RespCode.FAIL_CODE);
                 result.setRespDesc("字段不能为空！");

@@ -84,4 +84,52 @@ function pwdVlidator() {
 function pwdRecover() {
   document.getElementById("register-btn").disabled = false;
 }
+//注册表单提交
+function registForm(){
+  $.ajax({
+    //几个参数需要注意一下
+    type: "POST",//方法类型
+    url: "RegistServlet" ,//url
+    data: $('#registForm').serialize(),
+    success: function (result) {
+      alert(result);
+    },
+    error : function(err) {
+      alert("网络异常！");
+    }
+  });
+}
+//登陆模块验证
+/*function loginUser() {
+
+  var username = document.getElementById("loginUsername").value;
+  if(username.length<6||username.length>12){
+    alert("用户名长度6-12位");
+  }
+}
+function loginPass() {
+  var password = document.getElementById("loginPassword").value;
+  if(password.length<6||password.length>20){
+    alert("密码长度6-20位");
+  }
+}*/
+//登陆表单提交
+function loginFormSubmit(){
+  $.ajax({
+    //几个参数需要注意一下
+    type: "POST",//方法类型
+    url: "LoginServlet" ,//url
+    data: $('#loginForm').serialize(),
+    success: function (result) {
+      if (result == '登陆成功'){
+        window.location.href = "public.jsp";
+      }else{
+        alert(result);
+      }
+    },
+    error : function(err) {
+      alert("网络异常！");
+    }
+  });
+}
 

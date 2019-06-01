@@ -6,11 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="UnicomBlog12" />
-        <module name="UnicomBlog11" />
         <module name="UnicomBlog" />
         <module name="UnicomBlogPersonPage" />
-        <module name="UnicomBlogView" />
+        <module name="UnicomBlog5" />
       </profile>
     </annotationProcessing>
   </component>

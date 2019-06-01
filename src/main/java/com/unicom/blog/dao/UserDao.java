@@ -27,22 +27,21 @@ public class UserDao {
             //设置参数
             preparedStatement.setString(1, username);
             resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()) {
+            if(resultSet.next()){
                 flag = false;//有重名，不允许使用
-            } else {
+            }else{
                 flag = true;//未重名，允许使用
             }
-        } catch(ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        JDBCUtils.release(resultSet, preparedStatement, connection);
+        JDBCUtils.release(resultSet,preparedStatement,connection);
         return flag;
     }
-
     //根据昵称检查重名
-    public static boolean userCheckByNickName(String nickname) {
+    public static boolean userCheckByNickName(String nickname){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
@@ -55,27 +54,27 @@ public class UserDao {
             //设置参数
             preparedStatement.setString(1, nickname);
             resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()) {
+            if(resultSet.next()){
                 flag = false;//有重名，不允许使用
-            } else {
+            }else{
                 flag = true;//未重名，允许使用
             }
-        } catch(ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        JDBCUtils.release(resultSet, preparedStatement, connection);
+        JDBCUtils.release(resultSet,preparedStatement,connection);
         return flag;
     }
 
     //根据用户名返回user对象
-    public static User userByName(String username) {
+    public static User userByName(String username){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         boolean flag = false;
-        User user = new User();
+        User user=new User();
         try {
             connection = JDBCUtils.getConnection();
             //创建SQL语句
@@ -84,7 +83,7 @@ public class UserDao {
             //设置参数
             preparedStatement.setString(1, username);
             resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()) {
+            if(resultSet.next()){
                 //找到用户
                 user.setUid(resultSet.getInt("uid"));
                 user.setNickName(resultSet.getString("nick_name"));
@@ -93,25 +92,25 @@ public class UserDao {
                 user.setSts(resultSet.getString("sts").charAt(0));
                 user.setUserPassword(resultSet.getString("user_passwd"));
                 user.setUserName(resultSet.getString("user_name"));
-            } else {
+            }else{
                 //未找到用户
                 user.setUid(-1);
             }
-        } catch(ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        JDBCUtils.release(resultSet, preparedStatement, connection);
+        JDBCUtils.release(resultSet,preparedStatement,connection);
         return user;
     }
 
     //根据UID返回user对象
-    public static User userByUid(int uid) {
+    public static User userByUid(int uid){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-        User user = new User();
+        User user=new User();
         try {
             connection = JDBCUtils.getConnection();
             //创建SQL语句
@@ -120,7 +119,7 @@ public class UserDao {
             //设置参数
             preparedStatement.setInt(1, uid);
             resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()) {
+            if(resultSet.next()){
                 //找到用户
                 user.setUid(resultSet.getInt("uid"));
                 user.setNickName(resultSet.getString("nick_name"));
@@ -129,24 +128,24 @@ public class UserDao {
                 user.setSts(resultSet.getString("sts").charAt(0));
                 user.setUserPassword(resultSet.getString("user_passwd"));
                 user.setUserName(resultSet.getString("user_name"));
-            } else {
+            }else{
                 //未找到用户
                 user.setUid(-1);
             }
-        } catch(ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        JDBCUtils.release(resultSet, preparedStatement, connection);
+        JDBCUtils.release(resultSet,preparedStatement,connection);
         return user;
     }
 
     //用户注册
-    public static int userRegister(User user) {
+    public static int userRegister(User user){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
-        int result = 0;
+        int result=0;
         try {
             connection = JDBCUtils.getConnection();
             //创建SQL语句
@@ -156,27 +155,28 @@ public class UserDao {
             //设置参数
             preparedStatement.setString(1, user.getUserName());
             preparedStatement.setString(2, user.getUserPassword());
-            // preparedStatement.setTimestamp(3, new Timestamp(user.getCreateTime().getTime()));
+           // preparedStatement.setTimestamp(3, new Timestamp(user.getCreateTime().getTime()));
             //preparedStatement.setTimestamp(3, user.getCreateTime());
             preparedStatement.setString(3, String.valueOf(user.getSts()));
-            preparedStatement.setString(4, user.getNickName());
+            preparedStatement.setString(4,user.getNickName());
             preparedStatement.setString(5, user.getHead_icon());
             result = preparedStatement.executeUpdate();
-        } catch(ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        JDBCUtils.release(preparedStatement, connection);
+        JDBCUtils.release(preparedStatement,connection);
         return result;
+
 
     }
 
     //修改密码
-    public static int updatePassword(int uid, String password) {
+    public static int updatePassword(int uid,String password){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
-        int result = 0;
+        int result=0;
         try {
             connection = JDBCUtils.getConnection();
             //创建SQL语句
@@ -184,24 +184,24 @@ public class UserDao {
             preparedStatement = connection.prepareStatement(sql);
             //设置参数
             preparedStatement.setString(1, password);
-            preparedStatement.setInt(2, uid);
+            preparedStatement.setInt(2,uid);
             result = preparedStatement.executeUpdate();
-        } catch(ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        JDBCUtils.release(preparedStatement, connection);
+        JDBCUtils.release(preparedStatement,connection);
         return result;
 
     }
 
     //修改昵称
-    public static int updateNickName(int uid, String nickname) {
+    public static int updateNickName(int uid,String nickname){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        int result = 0;
+        int result=0;
         try {
             connection = JDBCUtils.getConnection();
             //创建SQL语句
@@ -209,20 +209,20 @@ public class UserDao {
             preparedStatement = connection.prepareStatement(sql);
             //设置参数
             preparedStatement.setString(1, nickname);
-            preparedStatement.setInt(2, uid);
+            preparedStatement.setInt(2,uid);
             result = preparedStatement.executeUpdate();
-        } catch(ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        JDBCUtils.release(preparedStatement, connection);
+        JDBCUtils.release(preparedStatement,connection);
         return result;
     }
 
     //关注用户
-    public static int followUser(int uid, int followeduid) {
-        int result = 0;
+    public static int followUser(int uid,int followeduid){
+        int result=0;
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
@@ -233,22 +233,22 @@ public class UserDao {
             preparedStatement = connection.prepareStatement(sql);
             //设置参数
             preparedStatement.setInt(1, uid);
-            preparedStatement.setInt(2, followeduid);
+            preparedStatement.setInt(2,followeduid);
             preparedStatement.setString(3, "N");
             result = preparedStatement.executeUpdate();
-        } catch(ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        JDBCUtils.release(preparedStatement, connection);
+        JDBCUtils.release(preparedStatement,connection);
         return result;
     }
 
     //获取关注用户列表
-    public static List<User> followUserList(int uid) {
+    public static List<User> followUserList(int uid){
         ResultSet resultSet = null;
-        List<User> userlist = new ArrayList<User>();
+        List<User> userlist=new ArrayList<User>();
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
@@ -260,8 +260,8 @@ public class UserDao {
             //设置参数
             preparedStatement.setInt(1, uid);
             resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()) {
-                User user = new User();
+            while(resultSet.next()){
+                User user=new User();
                 user.setUid(resultSet.getInt("uid"));
                 user.setNickName(resultSet.getString("nick_name"));
                 user.setCreateTime(resultSet.getTimestamp("create_time"));
@@ -271,13 +271,36 @@ public class UserDao {
                 user.setUserName(resultSet.getString("user_name"));
                 userlist.add(user);
             }
-        } catch(ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        JDBCUtils.release(resultSet, preparedStatement, connection);
+        JDBCUtils.release(resultSet,preparedStatement,connection);
         return userlist;
+    }
+    //UpdateUserInfo
+    public static int updateUserInfo(int uid,String password,String nickname){
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        int result=0;
+        try {
+            connection = JDBCUtils.getConnection();
+            //创建SQL语句
+            String sql = "update t_user set user_passwd=?,nick_name=? where uid=?";
+            preparedStatement = connection.prepareStatement(sql);
+            //设置参数
+            preparedStatement.setString(1, password);
+            preparedStatement.setString(2, nickname);
+            preparedStatement.setInt(3,uid);
+            result = preparedStatement.executeUpdate();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        JDBCUtils.release(preparedStatement,connection);
+        return result;
 
     }
 }

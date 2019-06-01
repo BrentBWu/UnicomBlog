@@ -2,18 +2,10 @@ package com.unicom.blog.servlet.blog;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import org.apache.commons.lang3.StringUtils;
-
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.unicom.blog.VO.UserBlogVO;
@@ -40,11 +32,12 @@ public class QryUserCollectBlogList4JspServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+        System.out.println(request.getParameter("type"));
         Result<List<UserBlogVO>> result = new Result<>();
+        User user = null;
         try {
-            User user = (User) request.getSession().getAttribute("user");
-
-            if(Objects.isNull(user)) {
+            user = (User) request.getSession().getAttribute("user");
+            if(user == null) {
                 result.setRespCode(RespCode.FAIL_CODE);
                 result.setRespDesc("获得用户信息失败，请重新登录！");
             } else {
@@ -57,9 +50,9 @@ public class QryUserCollectBlogList4JspServlet extends HttpServlet {
         }
         request.setAttribute("respCode", result.getRespCode());
         request.setAttribute("respDesc", result.getRespDesc());
-        request.setAttribute("respData", result.getRespData());
+        request.setAttribute("collectionBolgList", result.getRespData());
         try {
-            request.getRequestDispatcher("").forward(request, response);
+            request.getRequestDispatcher("QryUserBlogList4JspServlet?uid="+user.getUid()).forward(request, response);
         } catch(Exception e) {
             result.setRespCode(RespCode.FAIL_CODE);
             result.setRespDesc("服务器转发错误" + e.getMessage());
