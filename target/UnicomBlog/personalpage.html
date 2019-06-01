@@ -2,82 +2,85 @@
 <!-- saved from url=(0050)https://getbootstrap.com/docs/4.3/examples/album/# -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.8.5">
-<title>Personal Page</title>
-<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-<!-- Bootstrap core CSS -->
-<!-- Bootstrap Core CSS -->
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!-- Custom Fonts -->
-<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
-    rel="stylesheet" type="text/css"
->
-<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-<style>
-</style>
-<!-- Custom styles for this template -->
-<link rel="stylesheet" href="CSS/personalpage.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Personal Page</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <style>
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="CSS/personalpage.css">
 </head>
 <body data-gr-c-s-loaded="true">
-    <header>
-        <div class="navbar navbar-dark bg-warning">
-            <div class="container d-flex justify-content-between">
-                <a href="#" class="navbar-brand d-flex align-items-center text-dark"> <strong>Unicom Blog.</strong>
-                </a>
-                <button
-                    class="navbar-toggler collapsed bg-dark d-flex justify-content-center align-items-center info-changer"
+<header>
+
+    <div class="navbar navbar-dark bg-warning">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center text-dark">
+                <strong>Unicom Blog.</strong>
+            </a>
+            <button class="navbar-toggler collapsed bg-dark d-flex justify-content-center align-items-center info-changer"
                     type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader"
-                    aria-expanded="false" aria-label="Toggle navigation"
-                >
-                    <span class="text-warning font-weight-bold">资料修改</span>
-                </button>
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="text-warning font-weight-bold">资料修改</span>
+            </button>
+        </div>
+    </div>
+    <div class="bg-warning collapse" id="navbarHeader">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center changer-form">
+                <form action="#" method="get">
+                    <div class="form-group">
+                        <label class="font-weight-bold text-dark font-weight-bold">密码</label>
+                        <input type="password" class="form-control" id="pwd" name="password" placeholder="请输入密码">
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold text-dark font-weight-bold">确认密码</label>
+                        <input type="password" class="form-control" id="pwd1" placeholder="请确认密码"
+                               onkeypress="pwdRecover()">
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold text-dark font-weight-bold">昵称</label>
+                        <input type="text" class="form-control" id="text" name="nickname" placeholder="请输入昵称">
+                        <button type="submit" class="btn btn-dark font-weight-bold changer-footer" id="register-btn"
+                                onmouseover="pwdVlidator()">确认修改
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="bg-warning collapse" id="navbarHeader">
-            <div class="container">
-                <div class="row d-flex justify-content-center align-items-center changer-form">
-                    <form action="#" method="get">
-                        <div class="form-group">
-                            <label class="font-weight-bold text-dark font-weight-bold">密码</label> <input type="password"
-                                class="form-control" id="pwd" name="password" placeholder="请输入密码"
-                            >
-                        </div>
-                        <div class="form-group">
-                            <label class="font-weight-bold text-dark font-weight-bold">确认密码</label> <input
-                                type="password" class="form-control" id="pwd1" placeholder="请确认密码"
-                                onkeypress="pwdRecover()"
-                            >
-                        </div>
-                        <div class="form-group">
-                            <label class="font-weight-bold text-dark font-weight-bold">昵称</label> <input type="text"
-                                class="form-control" id="text" name="nickname" placeholder="请输入昵称"
-                            >
-                            <button type="submit" class="btn btn-dark font-weight-bold changer-footer" id="register-btn"
-                                onmouseover="pwdVlidator()"
-                            >确认修改</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main role="main">
+    </div>
+</header>
+
+<main role="main">
+
     <section class="jumbotron bg-dark shadow-sm">
         <div class="container d-flex justify-content-center align-items-center bg-dark">
-            <div class="btn btn-warning userImg">
-                <a href="#"><img src="Img/userImg.png" alt=""></a>
-            </div>
+            <div class="btn btn-warning userImg"><a href="#"><img src="Img/userImg.png" alt=""></a></div>
         </div>
         <div class="container text-center user-info bg-dark">
             <div class="user-username text-light">用户名：userIsMe</div>
             <div class="user-nickname text-light">昵称：咕达子是天才</div>
         </div>
     </section>
+
     <div class="album py-5 bg-light myblogs">
         <div class="container">
             <div class="text-dark font-weight-bold myblogstitle">我的文章</div>
@@ -85,8 +88,8 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -100,8 +103,8 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -115,8 +118,8 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -133,8 +136,8 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -148,8 +151,8 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -163,8 +166,8 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -181,8 +184,8 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -196,8 +199,8 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -211,8 +214,8 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -225,18 +228,24 @@
                 </div>
             </div>
         </div>
+
+
     </div>
-    </main>
-    <footer class="bg-dark">
-        <div class="footerInfo" id="foot-info">
-            <i class="fa fa-copyright" aria-hidden="true">用户名</i>
-        </div>
-    </footer>
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="JS/personalpage.js" type="text/javascript" charset="utf-8"></script>
+
+</main>
+
+<footer class="bg-dark">
+    <div class="footerInfo" id="foot-info">
+        <i class="fa fa-copyright" aria-hidden="true">用户名</i>
+    </div>
+</footer>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="JS/personalpage.js" type="text/javascript" charset="utf-8"></script>
+
 </body>
 </html>
