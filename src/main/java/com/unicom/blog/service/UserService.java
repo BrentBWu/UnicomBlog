@@ -126,12 +126,12 @@ public class UserService {
         int res=UserDao.updateNickName(uid,nickname);
         Result<Boolean> result=new Result<Boolean>();
         if(res==1){
-            //注册成功
+            //修改成功
             result.setRespCode("0000");
             result.setRespDesc("昵称修改成功");
             result.setRespData(true);
         }else{
-            //注册失败
+            //修改失败
             result.setRespCode("0001");
             result.setRespDesc("昵称修改失败");
             result.setRespData(false);
@@ -167,6 +167,24 @@ public class UserService {
         for(int i=0;i<res.size();i++){
             User user=res.get(i);
             System.out.println("name="+user.getUserName()+",pass="+user.getUserPassword()+",nickname="+user.getNickName()+",sts="+user.getSts()+",uid="+user.getUid()+",head="+user.getHead_icon()+",time="+user.getCreateTime());
+        }
+        return result;
+    }
+
+    //修改用户信息
+    public static Result<Boolean> updateUserInfo(int uid,String password,String nickname){
+        int res=UserDao.updateUserInfo(uid,password,nickname);
+        Result<Boolean> result=new Result<Boolean>();
+        if(res==1){
+            //用户信息修改成功
+            result.setRespCode("0000");
+            result.setRespDesc("用户信息修改成功");
+            result.setRespData(true);
+        }else{
+            //用户信息修改失败
+            result.setRespCode("0001");
+            result.setRespDesc("用户信息修改失败");
+            result.setRespData(false);
         }
         return result;
     }

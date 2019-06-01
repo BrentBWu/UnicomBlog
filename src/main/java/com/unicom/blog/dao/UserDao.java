@@ -278,7 +278,29 @@ public class UserDao {
         }
         JDBCUtils.release(resultSet,preparedStatement,connection);
         return userlist;
-
+    }
+    //UpdateUserInfo
+    public static int updateUserInfo(int uid,String password,String nickname){
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        int result=0;
+        try {
+            connection = JDBCUtils.getConnection();
+            //创建SQL语句
+            String sql = "update t_user set user_passwd=?,nick_name=? where uid=?";
+            preparedStatement = connection.prepareStatement(sql);
+            //设置参数
+            preparedStatement.setString(1, password);
+            preparedStatement.setString(2, nickname);
+            preparedStatement.setInt(3,uid);
+            result = preparedStatement.executeUpdate();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        JDBCUtils.release(preparedStatement,connection);
+        return result;
 
     }
 }

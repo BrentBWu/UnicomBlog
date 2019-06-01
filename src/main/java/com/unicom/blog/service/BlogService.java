@@ -165,7 +165,7 @@ public class BlogService {
 			    Connection conn = JDBCUtils.getConnection();
 			    
 			    String qrySql = "SELECT a.*,b.nick_name,b.head_icon from T_BLOG  a"
-			    		+ " LEFT JOIN T_USER b on  a.uid = b.uid  ORDER BY likes_count desc";
+			    		+ " LEFT JOIN T_USER b on  a.uid = b.uid where a.sts = 'N' ORDER BY likes_count desc";
 		    	PreparedStatement qryPstmt;
 		    	qryPstmt = (PreparedStatement) conn.prepareStatement(qrySql);
 		    	ResultSet rs = qryPstmt.executeQuery();
@@ -230,7 +230,7 @@ public class BlogService {
 			    Connection conn = JDBCUtils.getConnection();
 			    
 			    String qrySql = "SELECT a.*,b.nick_name,b.head_icon from T_BLOG  a"
-			    		+ " LEFT JOIN T_USER b on  a.uid = b.uid  where a.uid = ? ORDER BY create_time desc";
+			    		+ " LEFT JOIN T_USER b on  a.uid = b.uid  where a.uid = ? and a.sts = 'N' ORDER BY create_time desc";
 		    	PreparedStatement qryPstmt;
 		    	qryPstmt = (PreparedStatement) conn.prepareStatement(qrySql);
 		    	qryPstmt.setInt(1, uid);
@@ -295,7 +295,7 @@ public class BlogService {
 			    
 			    String qrySql = "SELECT b.*,c.nick_name,c.head_icon from T_BLOG_LIKE"
 			    		+ " a LEFT JOIN T_BLOG  b on a.bid = b.bid  LEFT JOIN T_USER c"
-			    		+ " ON  b.uid =c.uid where b.uid = ? ORDER BY a.create_time";
+			    		+ " ON  b.uid =c.uid where b.uid = ? and a.sts = 'N' ORDER BY a.create_time";
 		    	PreparedStatement qryPstmt;
 		    	qryPstmt = (PreparedStatement) conn.prepareStatement(qrySql);
 		    	qryPstmt.setInt(1, uid);
@@ -359,7 +359,7 @@ public class BlogService {
 			    
 			    String qrySql = "SELECT b.*,c.nick_name,c.head_icon from T_BLOG_COLLECTIONS"
 			    		+ " a LEFT JOIN T_BLOG  b on a.bid = b.bid  LEFT JOIN T_USER c"
-			    		+ " ON  b.uid =c.uid where b.uid = ? ORDER BY a.create_time";
+			    		+ " ON  b.uid =c.uid where b.uid = ? and a.sts = 'N' ORDER BY a.create_time";
 		    	PreparedStatement qryPstmt;
 		    	qryPstmt = (PreparedStatement) conn.prepareStatement(qrySql);
 		    	qryPstmt.setInt(1, uid);
@@ -424,7 +424,7 @@ public class BlogService {
 			    Connection conn = JDBCUtils.getConnection();
 			    
 			    String qrySql = "SELECT a.*,b.nick_name,b.head_icon from T_BLOG  a"
-			    		+ " LEFT JOIN T_USER b on  a.uid = b.uid where a.title like ? ORDER BY likes_count desc";
+			    		+ " LEFT JOIN T_USER b on  a.uid = b.uid where a.title like ? and a.sts = 'N' ORDER BY likes_count desc";
 		    	PreparedStatement qryPstmt;
 		    	qryPstmt = (PreparedStatement) conn.prepareStatement(qrySql);
 		    	qryPstmt.setString(1, "%"+keyword.trim()+"%");

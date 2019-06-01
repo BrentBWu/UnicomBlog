@@ -79,20 +79,20 @@
             </div>
             <div class="modal-body">
                 <!-- 登陆表单 -->
-                <form action="<%=basePath%>/LoginServlet" method="get">
+                <form id="loginForm">
                     <div class="form-group">
                         <label for="userId" class="font-weight-bold">用户名</label>
-                        <input type="text" class="form-control" name="username" placeholder="请输入用户名"
-                               pattern="[a-zA-z]{6-12}" required>
+                        <input type="text" id="loginUsername" class="form-control" name="username" placeholder="请输入用户名"
+                               >
                     </div>
                     <div class="form-group">
                         <label class="font-weight-bold">密码</label>
-                        <input type="password" class="form-control" name="password" placeholder="请输入密码"
-                               pattern="[0-9]{6,}" required>
+                        <input type="password" id="loginPassword" class="form-control" name="password" placeholder="请输入密码"
+                               >
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
-                        <button type="submit" class="btn btn-primary" value="submit">登录</button>
+                        <button type="button" class="btn btn-primary" value="submit" onclick="loginFormSubmit()">登录</button>
                     </div>
                 </form>
             </div>
@@ -112,14 +112,14 @@
             </div>
             <div class="modal-body">
                 <!-- 注册表单 -->
-                <form action="<%=basePath%>/RegistServlet" method="get">
+                <form id="registForm">
                     <div class="form-group">
                         <label for="userId" class="font-weight-bold">用户名</label>
-                        <input type="text" class="form-control" id="userId" name="username" placeholder="请输入用户名">
+                        <input type="text" class="form-control" id="userId" name="username" placeholder="请输入用户名，长度6-12" required="required">
                     </div>
                     <div class="form-group">
                         <label class="font-weight-bold">密码</label>
-                        <input type="password" class="form-control" id="pwd" name="password"  placeholder="请输入密码">
+                        <input type="password" class="form-control" id="pwd" name="password"  placeholder="请输入密码，长度6-20" required="required">
                     </div>
                     <div class="form-group">
                         <label class="font-weight-bold">确认密码</label>
@@ -131,7 +131,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
-                        <button type="submit" class="btn btn-primary" id="register-btn" onmouseover="pwdVlidator()">注册</button>
+                        <button type="button" class="btn btn-primary" id="register-btn" onmouseover="pwdVlidator()" onclick="registForm()">注册</button>
                     </div>
                 </form>
             </div>

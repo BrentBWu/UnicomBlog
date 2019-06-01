@@ -39,7 +39,7 @@ public class DeleteBlogServlet extends HttpServlet{
 			ReqUtil.setEncoding(request, resp);
 			
 			Integer bid = ReqUtil.getInt(request, "bid");
-		
+			System.out.println(bid);
 			HttpSession session = request.getSession();
 			
 			if(session.getAttribute("user") == null){
