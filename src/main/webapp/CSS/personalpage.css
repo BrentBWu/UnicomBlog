@@ -1,86 +1,83 @@
 .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
 }
 
-.userImg img{
-    width: 100px;
-    height: 100px;
-    border-Radius: 50px;
+.userImg img {
+	width: 100px;
+	height: 100px;
+	border-Radius: 50px;
 }
 
-.userImg{
-    width: 106px;
-    height: 106px;
-    border-Radius: 53px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
+.userImg {
+	width: 106px;
+	height: 106px;
+	border-Radius: 53px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15px;
 }
 
-
-.user-username{
-    margin-bottom: 10px;
+.user-username {
+	margin-bottom: 10px;
 }
 
-.user-info{
-    margin-bottom: 15px;
-
+.user-info {
+	margin-bottom: 15px;
 }
 
-.info-changer{
-    font-family: "微软雅黑";
-    font-size: 15px;
-    height: 30px;
+.info-changer {
+	font-family: "微软雅黑";
+	font-size: 15px;
+	height: 30px;
 }
 
-.jumbotron{
-    margin-bottom: 0 !important;
-    border-radius: 0 !important;
-    font-family: "微软雅黑";
+.jumbotron {
+	margin-bottom: 0 !important;
+	border-radius: 0 !important;
+	font-family: "微软雅黑";
 }
 
-.changer-footer{
-    margin-top: 20px;
-    margin-bottom: 10px;
+.changer-footer {
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
-.changer-form{
-    padding-top: 20px;
+.changer-form {
+	padding-top: 20px;
 }
 
-.changer-form>form{
-    font-family: "微软雅黑";
+.changer-form>form {
+	font-family: "微软雅黑";
 }
 
-.myblogs{
-    font-family: "微软雅黑";
+.myblogs {
+	font-family: "微软雅黑";
 }
 
-.myblogstitle{
-    margin-bottom: 20px;
-    font-size: 18px;
+.myblogstitle {
+	margin-bottom: 20px;
+	font-size: 18px;
 }
 
 /*
  * Footer
  */
-
 footer {
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: whitesmoke;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: whitesmoke;
 }

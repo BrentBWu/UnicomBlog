@@ -7,14 +7,14 @@ import java.util.Date;
  * @author XuetingOu
  */
 public class UserFollow {
+
     private int fid;//关注标识
     private int uid;//用户标识
     private int followedUid;//被关注人标识
     private Date createTime;//创建时间
     private char sts;//启用标识
 
-    public UserFollow() {
-    }
+    public UserFollow() {}
 
     public UserFollow(int fid, int uid, int followedUid, Date createTime, char sts) {
         this.fid = fid;

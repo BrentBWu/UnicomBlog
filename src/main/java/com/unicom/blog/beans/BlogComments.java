@@ -6,6 +6,7 @@ import java.util.Date;
  * 博客评论
  */
 public class BlogComments {
+
     private int cid;//评论标识
     private int bid;//文章标识
     private int uid;//评论人
@@ -14,9 +15,10 @@ public class BlogComments {
     private int floorNum;//评论楼层
     private char sts;//启用标识
 
-    public BlogComments(){
+    public BlogComments() {
 
     }
+
     public BlogComments(int cid, int bid, int uid, String content, Date createDate, int floorNum, char sts) {
         this.cid = cid;
         this.bid = bid;
