@@ -6,14 +6,14 @@ import java.util.Date;
  *博客收藏表
  */
 public class BlogCollections {
+
     private int cid;//收藏标识
     private int uid;//收藏用户
     private int bid;//收藏文章
     private Date createTime;//创建时间
     private char sts;//启用标识
 
-    public BlogCollections() {
-    }
+    public BlogCollections() {}
 
     public BlogCollections(int cid, int uid, int bid, Date createTime, char sts) {
         this.cid = cid;

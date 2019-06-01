@@ -6,6 +6,7 @@ import java.util.Date;
  * 博客
  */
 public class Blog {
+
     private int bid;//文章标识
     private int uid;//文章作者
     private String title;//文章标题
@@ -17,10 +18,12 @@ public class Blog {
     private int likesCount;//点赞数
     private int collectionCount;//收藏数
 
-    public Blog(){
+    public Blog() {
 
     }
-    public Blog(int bid, int uid, String title, Date createTime, Date updateTime, String content, char sts, int commentsCount, int likesCount, int collectionCount) {
+
+    public Blog(int bid, int uid, String title, Date createTime, Date updateTime, String content, char sts,
+            int commentsCount, int likesCount, int collectionCount) {
         this.bid = bid;
         this.uid = uid;
         this.title = title;
