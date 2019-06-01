@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="54043a24-a63d-4bb5-9f9b-99599b97e493" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/public.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="110" column="56" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
+            <state relative-caret-position="231">
+              <caret line="92" column="50" lean-forward="true" selection-start-line="92" selection-start-column="50" selection-end-line="92" selection-end-column="50" />
               <folding>
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -712,7 +711,7 @@
       <workItem from="1559265844418" duration="14165000" />
       <workItem from="1559378124024" duration="1307000" />
       <workItem from="1559379742885" duration="211000" />
-      <workItem from="1559380148717" duration="7697000" />
+      <workItem from="1559380148717" duration="8451000" />
     </task>
     <task id="LOCAL-00001" summary="注释">
       <created>1558957490651</created>
@@ -777,11 +776,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559382185211</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="更新公共主页原型: 轮播图">
+      <created>1559390899218</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1559390899218</updated>
+    </task>
+    <task id="LOCAL-00011" summary="更新公共主页原型: 轮播图">
+      <created>1559391323828</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1559391323828</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66173000" />
+    <option name="totallyTimeSpent" value="66927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -872,7 +885,8 @@
     <MESSAGE value="个人主页网站原型&#10;personal page demo" />
     <MESSAGE value="更新个人主页的网站原型" />
     <MESSAGE value="更新公共主页原型" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新公共主页原型" />
+    <MESSAGE value="更新公共主页原型: 轮播图" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新公共主页原型: 轮播图" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1275,8 +1289,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/public.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="110" column="56" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
+        <state relative-caret-position="231">
+          <caret line="92" column="50" lean-forward="true" selection-start-line="92" selection-start-column="50" selection-end-line="92" selection-end-column="50" />
           <folding>
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
