@@ -21,68 +21,85 @@ public class JDBCUtils {
         // System.out.println(JDBCDemo2.class.getClassLoader().getResource(""));
         try {
             properties.load(inputStream);
-        } catch (IOException e) {
+        } catch(IOException e) {
             e.printStackTrace();
         }
-        driverClass=properties.getProperty("driverClass");
-        url=properties.getProperty("url");
-        username=properties.getProperty("username");
-        password=properties.getProperty("password");
+        driverClass = properties.getProperty("driverClass");
+        url = properties.getProperty("url");
+        username = properties.getProperty("username");
+        password = properties.getProperty("password");
     }
-
 
     //建立连接
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
         //加载驱动
         Class.forName(driverClass);
         //获取连接
-        Connection connection = DriverManager.getConnection(url,username,password);
+        Connection connection = DriverManager.getConnection(url, username, password);
         return connection;
 
     }
+
     //释放资源
-    public static void release(Statement statement, Connection connection){
-        if (statement!=null){
+    public static void release(Statement statement, Connection connection) {
+        if(statement != null) {
             try {
                 statement.close();
-            } catch (SQLException e) {
+            } catch(SQLException e) {
                 e.printStackTrace();
             }
-            statement=null;
+            statement = null;
         }
-        if (connection!=null){
+        if(connection != null) {
             try {
                 connection.close();
-            } catch (SQLException e) {
+            } catch(SQLException e) {
                 e.printStackTrace();
             }
-            connection=null;
+            connection = null;
         }
     }
-    public static void release(ResultSet resultSet, Statement statement, Connection connection){
-        if (resultSet!=null){
+
+    public static void release(ResultSet resultSet, Statement statement, Connection connection) {
+        if(resultSet != null) {
             try {
                 resultSet.close();
-            } catch (SQLException e) {
+            } catch(SQLException e) {
                 e.printStackTrace();
             }
-            resultSet=null;
+            resultSet = null;
         }
-        if (statement!=null){
+        if(statement != null) {
             try {
                 statement.close();
-            } catch (SQLException e) {
+            } catch(SQLException e) {
                 e.printStackTrace();
             }
-            statement=null;
+            statement = null;
         }
-        if (connection!=null){
+        if(connection != null) {
             try {
                 connection.close();
-            } catch (SQLException e) {
+            } catch(SQLException e) {
                 e.printStackTrace();
             }
-            connection=null;
+            connection = null;
+        }
+    }
+
+    public static void main(String[] args) {
+        try(Connection connection = JDBCUtils.getConnection();
+                PreparedStatement ps = connection.prepareStatement("select * from 成绩表;");
+                ResultSet rs = ps.executeQuery();) {
+            while(rs.next()) {
+                System.out.println(rs.getString("学生"));
+            }
+        } catch(ClassNotFoundException e) {
+            // TODO 自动生成的 catch 块
+            e.printStackTrace();
+        } catch(SQLException e) {
+            // TODO 自动生成的 catch 块
+            e.printStackTrace();
         }
     }
 }
