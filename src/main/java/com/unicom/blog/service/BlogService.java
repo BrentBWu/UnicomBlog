@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.junit.Test;
 
 import com.unicom.blog.VO.UserBlogVO;
 import com.unicom.blog.beans.Result;
@@ -61,7 +60,6 @@ public class BlogService {
 	 * @param content
 	 * @return
 	 */
-	@Test
 	public Result<String> modifyBlog(final Integer uid, final Integer bid, final String title, final String content){
 		Result<String> result = new Result<>();
 		try {
