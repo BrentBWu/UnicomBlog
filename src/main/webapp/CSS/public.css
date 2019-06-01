@@ -1,0 +1,16 @@
+.list-title>h3{
+    font-family: 微软雅黑 !important;
+    font-size: 28px;
+    padding-top: 15px;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slidegroup {
+    height: 500px;
+    width: 100%;
+}

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="UnicomBlog" />
         <module name="UnicomBlog11" />
+        <module name="UnicomBlog12" />
         <module name="UnicomBlogPersonPage" />
       </profile>
     </annotationProcessing>
