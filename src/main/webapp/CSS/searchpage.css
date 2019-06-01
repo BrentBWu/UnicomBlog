@@ -1,0 +1,17 @@
+.search-bar{
+    height: 400px !important;
+}
+
+.navbar{
+    height: 80px !important;
+}
+
+.album {
+    padding-top: 1rem!important;
+}
+
+.search-bar-title{
+    margin-left: 200px;
+    font-family: 微软雅黑;
+    padding-top: 10px;
+}

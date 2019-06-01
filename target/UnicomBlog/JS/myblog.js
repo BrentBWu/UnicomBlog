@@ -68,3 +68,25 @@ var onMapClickHandler = function(event) {
 // Enable map zooming with mouse scroll when the user clicks the map
 $('.map').on('click', onMapClickHandler);
 
+
+function searchBlog(){
+    $.ajax({
+        //几个参数需要注意一下
+        type: "POST",//方法类型
+        url: "QryBlogListByKeyword4JspServlet?bid="+bid ,//url
+        //data: $('#updatePwdForm').serialize(),
+        success: function (result) {
+            if (result.RESP_CODE == '0000'){
+                // 成功
+                alert(result.RESP_DESC);
+                window.location.href = "QryUserCollectBlogList4JspServlet?type=all";
+            }else {
+                // 失败
+                alert(result.RESP_DESC);
+            }
+        },
+        error : function(err) {
+            alert("网络异常！");
+        }
+    });
+}

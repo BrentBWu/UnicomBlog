@@ -64,9 +64,9 @@
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
                 <nav class="navbar navbar-light bg-light">
-                    <form class="form-inline">
+                    <form class="form-inline" id="form-search">
                         <input class="form-control mr-sm-2" type="search" placeholder="搜索" aria-label="Search">
-                        <button class="btn btn-warning my-2 my-sm-0 fa fa-search btn-lg" aria-hidden="true" type="submit"></button>
+                        <button class="btn btn-warning my-2 my-sm-0 fa fa-search btn-lg" aria-hidden="true" type="submit" onclick="searchBlog()"></button>
                     </form>
                 </nav>
             </div>
