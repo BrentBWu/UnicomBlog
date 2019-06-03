@@ -65,10 +65,10 @@
             </div>
             <div class="col-4 text-center">
                 <c:if test="${user.uid == authorId}">
-                    <a class="blog-header-logo text-dark" href="QryUserCollectBlogList4JspServlet?type=all">${nickName}</a>
+                    <a class="blog-header-logo text-dark" href="QryUserCollectBlogList4JspServlet?type=all">${user.nickName}</a>
                 </c:if>
                 <c:if test="${user.uid != authorId}">
-                 <a class="blog-header-logo text-dark" href="#">${user.nickName}</a>
+                 <a class="blog-header-logo text-dark" href="#">${nickName}</a>
                 </c:if>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
