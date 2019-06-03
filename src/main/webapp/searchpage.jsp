@@ -40,10 +40,10 @@
             <a class="js-scroll-trigger" href="#page-main">文章主页</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#">个人主页</a>
+            <a class="js-scroll-trigger" href="QryUserBlogList4JspServlet?uid=${user.uid}">个人主页</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#">关注列表</a>
+            <a class="js-scroll-trigger" href="FollowUserListServlet">关注列表</a>
         </li>
         <!-- <li class="sidebar-nav-item">
                 <a class="js-scroll-trigger" href="#footerInfo">关于我们</a>
@@ -60,8 +60,8 @@
 <header>
     <div class="navbar navbar-dark bg-dark">
         <div class="container d-flex justify-content-between">
-            <a href="#" class="navbar-brand d-flex align-items-center text-warning">
-                <strong>Unicom Blog.</strong>
+            <a href="QryUserBlogList4JspServlet?uid=${user.uid}" class="navbar-brand d-flex align-items-center text-warning">
+                <strong>My Blog.</strong>
             </a>
         </div>
     </div>
@@ -110,7 +110,7 @@
 
 <footer>
     <div class="footerInfo" id="foot-info">
-        <i class="fa fa-copyright" aria-hidden="true">用户名</i>
+        <i class="fa fa-copyright" aria-hidden="true">${user.nickName}</i>
     </div>
 </footer>
 

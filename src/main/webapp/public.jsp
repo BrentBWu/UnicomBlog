@@ -47,7 +47,7 @@
             <a class="js-scroll-trigger" href="QryUserBlogList4JspServlet?uid=${user.uid}">个人主页</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#">关注列表</a>
+            <a class="js-scroll-trigger" href="FollowUserListServlet">关注列表</a>
         </li>
         <!-- <li class="sidebar-nav-item">
                 <a class="js-scroll-trigger" href="#footerInfo">关于我们</a>
@@ -186,7 +186,7 @@
 
 <footer>
     <div class="footerInfo" id="foot-info">
-        <i class="fa fa-copyright" aria-hidden="true">用户名</i>
+        <i class="fa fa-copyright" aria-hidden="true">${user.nickName}</i>
     </div>
 </footer>
 

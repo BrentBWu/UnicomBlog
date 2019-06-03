@@ -161,7 +161,7 @@
 
 <footer class="bg-dark">
     <div class="footerInfo" id="foot-info">
-        <i class="fa fa-copyright" aria-hidden="true">用户名</i>
+        <i class="fa fa-copyright" aria-hidden="true">${user.nickName}</i>
     </div>
 </footer>
 <!-- Bootstrap core JavaScript -->

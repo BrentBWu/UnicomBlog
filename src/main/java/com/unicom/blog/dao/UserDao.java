@@ -303,4 +303,31 @@ public class UserDao {
         return result;
 
     }
+    //判断是否关注
+    public static boolean chkFollowUser(int uid,int followeduid){
+        boolean isfollowed=false;
+        ResultSet resultSet = null;
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            connection = JDBCUtils.getConnection();
+            //创建SQL语句
+            String sql = "select * from t_user_follow where uid=? and followed_uid=?";
+            preparedStatement = connection.prepareStatement(sql);
+            //设置参数
+            preparedStatement.setInt(1, uid);
+            preparedStatement.setInt(2, followeduid);
+            resultSet = preparedStatement.executeQuery();
+            if(resultSet.next())isfollowed=true;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        JDBCUtils.release(resultSet,preparedStatement,connection);
+        return isfollowed;
+
+
+    }
+
 }

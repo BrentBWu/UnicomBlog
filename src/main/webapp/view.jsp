@@ -38,12 +38,12 @@
         </li>
         <c:if test="${not empty user}">
             <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="QryUserCollectBlogList4JspServlet?type=all">个人主页</a>
+                <a class="js-scroll-trigger" href="QryUserBlogList4JspServlet?uid=${user.uid}">个人主页</a>
             </li>
         </c:if>
 
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#">关注列表</a>
+            <a class="js-scroll-trigger" href="FollowUserListServlet">关注列表</a>
         </li>
         <!-- <li class="sidebar-nav-item">
                 <a class="js-scroll-trigger" href="#footerInfo">关于我们</a>
@@ -58,7 +58,7 @@
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-                <a class="btn btn-warning btn-lg fa fa-heart" href="#"></a>
+               <a class="btn btn-warning btn-lg fa fa-heart" href="#"></a>
             </div>
             <div class="col-4 text-center">
                 <a class="blog-header-logo text-dark" href="#" id="username"></a>
@@ -107,7 +107,7 @@
 
 <footer>
     <div class="footerInfo" id="foot-info">
-        <i class="fa fa-copyright" aria-hidden="true">用户名</i>
+        <i class="fa fa-copyright" aria-hidden="true">${user.nickName}</i>
     </div>
 </footer>
 

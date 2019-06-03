@@ -7,76 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54043a24-a63d-4bb5-9f9b-99599b97e493" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/ChkFollowUserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/BlogCollections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/BlogCollections.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/BlogComments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/BlogComments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/BlogLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/BlogLike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/UserFollow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/UserFollow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/GetBlogFullContentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/GetBlogFullContentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryBlogListByKeyword4JspServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryBlogListByKeyword4JspServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryHightlightBlogList4JspServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryHightlightBlogList4JspServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryUserBlogList4JspServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryUserBlogList4JspServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JS/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JS/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/FollowUserListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/FollowUserListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/FollowUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/FollowUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/FollowList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/FollowList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/JS/myblog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JS/myblog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/myblog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/myblog.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/personalpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/personalpage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/publish.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/publish.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/META-INF/UnicomBlog.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/service/BlogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/service/BlogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/service/CollectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/service/CollectionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/service/LikeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/service/LikeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/GetBlogFullContentServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/GetBlogFullContentServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/ModifyBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/ModifyBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/PublishBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/PublishBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryBlogListByKeywordServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryBlogListByKeywordServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryHighlightBlogListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryHighlightBlogListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryHightlightBlogList4JspServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryHightlightBlogList4JspServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryUserBlogListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryUserBlogListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryUserCollectBlogListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryUserCollectBlogListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryUserLikeBlogListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryUserLikeBlogListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/collection/ChkCollectBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/collection/ChkCollectBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/collection/CollectBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/collection/CollectBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/comment/CommentBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/comment/CommentBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/comment/QryBlogCommentListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/comment/QryBlogCommentListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/like/ChkLikeBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/like/ChkLikeBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/like/LikeBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/like/LikeBlogServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/searchpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/searchpage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/JS/myblog.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/JS/myblog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryBlogListByKeyword4JspServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/blog/QryBlogListByKeyword4JspServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/user/FollowUserListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/user/FollowUserListServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/user/FollowUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/user/FollowUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/user/UpdateNickNameServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/user/UpdateNickNameServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/user/UpdatePasswordServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/servlet/user/UpdatePasswordServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/utils/ReqUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/classes/com/unicom/blog/utils/ReqUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UnicomBlog/myblog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/myblog.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/UnicomBlog/personalpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/UnicomBlog/personalpage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/service/BlogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/service/BlogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/service/CollectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/service/CollectionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/service/LikeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/service/LikeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/GetBlogFullContentServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/GetBlogFullContentServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/ModifyBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/ModifyBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/PublishBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/PublishBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryBlogListByKeywordServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryBlogListByKeywordServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryHighlightBlogListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryHighlightBlogListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryHightlightBlogList4JspServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryHightlightBlogList4JspServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryUserBlogListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryUserBlogListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryUserCollectBlogListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryUserCollectBlogListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryUserLikeBlogListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryUserLikeBlogListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/collection/ChkCollectBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/collection/ChkCollectBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/collection/CollectBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/collection/CollectBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/comment/CommentBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/comment/CommentBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/comment/QryBlogCommentListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/comment/QryBlogCommentListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/like/ChkLikeBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/like/ChkLikeBlogServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/like/LikeBlogServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/like/LikeBlogServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryBlogListByKeyword4JspServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/blog/QryBlogListByKeyword4JspServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/user/FollowUserListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/user/FollowUserListServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/user/FollowUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/user/FollowUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/user/UpdateNickNameServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/user/UpdateNickNameServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/user/UpdatePasswordServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/servlet/user/UpdatePasswordServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unicom/blog/utils/ReqUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unicom/blog/utils/ReqUtil.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -105,71 +63,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryHightlightBlogList4JspServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="43" column="40" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryBlogListByKeyword4JspServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/publish.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/view.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3082">
-              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="136" selection-end-column="1" />
+            <state relative-caret-position="23">
+              <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/searchpage.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/searchpage.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/CSS/searchpage.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/like/ChkLikeBlogServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-166">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/like/LikeBlogServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="45" column="54" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="54" />
+            <state relative-caret-position="246">
+              <caret line="112" column="70" selection-start-line="112" selection-start-column="54" selection-end-line="112" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -177,8 +84,71 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="102" column="86" selection-start-line="102" selection-start-column="78" selection-end-line="102" selection-end-column="86" />
+            <state relative-caret-position="290">
+              <caret line="45" column="68" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/FollowList.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-329">
+              <caret line="65" column="92" selection-start-line="65" selection-start-column="82" selection-end-line="65" selection-end-column="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-61">
+              <caret line="185" column="147" selection-start-line="185" selection-start-column="126" selection-end-line="185" selection-end-column="147" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/myblog.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/dao/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2737">
+              <caret line="124" column="15" selection-start-line="124" selection-start-column="15" selection-end-line="124" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/personalpage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="163" column="70" selection-start-line="163" selection-start-column="70" selection-end-line="163" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/public.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="49" column="68" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryUserBlogList4JspServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="65" column="42" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -211,10 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/testServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/registServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/loginServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/LoginServlet.java" />
@@ -236,9 +202,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/DeleteBlogServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/JS/personalpage.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/service/BlogService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/FollowList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/JS/common.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/listener/HighBolgListener.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/JS/login.js" />
@@ -250,18 +214,24 @@
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/UserFollow.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/publish.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryHightlightBlogList4JspServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/public.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryUserBlogList4JspServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/GetBlogFullContentServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/personalpage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/myblog.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JS/myblog.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/JS/edit.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/JS/publish.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/JS/view.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryBlogListByKeyword4JspServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JS/myblog.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/FollowUserServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/ChkFollowUserServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/FollowList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/FollowUserListServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/searchpage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/personalpage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/public.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/myblog.jsp" />
       </list>
     </option>
   </component>
@@ -356,7 +326,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UnicomBlog5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UnicomBlog5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UnicomBlog5" type="b2602c69:ProjectViewProjectNode" />
@@ -375,7 +354,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UnicomBlog5" type="b2602c69:ProjectViewProjectNode" />
@@ -405,7 +384,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="JS" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UnicomBlog5" type="b2602c69:ProjectViewProjectNode" />
@@ -435,7 +414,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/unicom/blog/service" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -446,11 +425,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\UnicomBlog5\src\main\java\com\unicom\blog\service" />
+      <recent name="D:\IdeaProjects\UnicomBlog5\src\main\java\com\unicom\blog\dao" />
+      <recent name="D:\IdeaProjects\UnicomBlog5\src\main\java\com\unicom\blog\servlet\user" />
       <recent name="D:\IdeaProjects\UnicomBlog5\src\main\webapp\CSS" />
       <recent name="D:\IdeaProjects\UnicomBlog5\src\main\webapp\JS" />
-      <recent name="D:\IdeaProjects\UnicomBlog5\src\main\webapp" />
-      <recent name="D:\IdeaProjects\UnicomBlog5\src\main\webapp\WEB-INF" />
-      <recent name="D:\IdeaProjects\UnicomBlog5\src\main\java\com\unicom\blog\dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IdeaProjects\UnicomBlog5\src\main\webapp" />
@@ -856,11 +835,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559375356699</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="整合">
+      <created>1559550867381</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1559550867381</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110886000" />
+    <option name="totallyTimeSpent" value="120199000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -873,7 +859,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Learn" order="0" />
       <window_info id="Image Layers" order="1" />
@@ -881,7 +866,7 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.8114525" visible="true" weight="0.30153596" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.8114525" visible="true" weight="0.17865804" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="Web" order="8" sideWeight="0.18854749" side_tool="true" weight="0.21208054" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32960895" />
@@ -892,13 +877,13 @@
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50067025" side_tool="true" weight="0.16572239" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32960895" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.071047954" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.3463588" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.13499112" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32960895" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.28063944" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.43872115" />
       <window_info anchor="bottom" id="Application Servers" order="15" weight="0.3286119" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
@@ -917,7 +902,7 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.8114525" visible="true" weight="0.25707355" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.8114525" visible="true" weight="0.19805983" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="Web" order="8" sideWeight="0.18854749" side_tool="true" weight="0.21208054" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32960895" />
@@ -928,13 +913,13 @@
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50067025" side_tool="true" weight="0.16572239" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32960895" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.071047954" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.3463588" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.13499112" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32960895" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.28063944" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.43872115" />
       <window_info anchor="bottom" id="Application Servers" order="15" weight="0.3286119" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
@@ -961,37 +946,14 @@
     <MESSAGE value="更新个人主页的网站原型" />
     <MESSAGE value="文章发布页面原型" />
     <MESSAGE value="修改个人主页" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改个人主页" />
+    <MESSAGE value="整合" />
+    <option name="LAST_COMMIT_MESSAGE" value="整合" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/FollowUserListServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryHighlightBlogListServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/PublishBlogServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1006,37 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2852">
-          <caret line="124" column="15" selection-start-line="124" selection-start-column="15" selection-end-line="124" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/UpdatePasswordServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/RegistServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="153" column="39" lean-forward="true" selection-start-line="153" selection-start-column="39" selection-end-line="153" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/UpdateUserInfoServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1044,13 +975,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/DeleteBlogServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1066,20 +990,6 @@
             <element signature="e#11552#11564#0" expanded="true" />
             <element signature="e#13875#13887#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/FollowUserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/FollowList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="39" column="79" lean-forward="true" selection-start-line="39" selection-start-column="79" selection-end-line="39" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -1108,13 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-115">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1183,20 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryUserBlogList4JspServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="65" column="42" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/VO/UserBlogVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1204,63 +1093,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/public.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2338">
-          <caret line="66" column="63" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="63" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="185" column="147" selection-start-line="185" selection-start-column="126" selection-end-line="185" selection-end-column="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/publish.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1419">
-          <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/myblog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/myblog.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="114" column="129" selection-start-line="114" selection-start-column="129" selection-end-line="114" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/edit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" column="72" lean-forward="true" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/personalpage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="99" column="59" lean-forward="true" selection-start-line="99" selection-start-column="59" selection-end-line="99" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -1275,20 +1111,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-166">
           <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/publish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="102" column="86" selection-start-line="102" selection-start-column="78" selection-end-line="102" selection-end-column="86" />
         </state>
       </provider>
     </entry>
@@ -1313,16 +1135,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3082">
-          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="136" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/searchpage.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/searchpage.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1340,6 +1152,180 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/UpdatePasswordServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/RegistServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="153" column="39" selection-start-line="153" selection-start-column="39" selection-end-line="153" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/publish.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="4" selection-start-line="4" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/DeleteBlogServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-429">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/myblog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="845">
+          <caret line="105" column="10" lean-forward="true" selection-start-line="105" selection-start-column="10" selection-end-line="105" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/FollowUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="30" column="47" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="30" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1101">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="136" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/beans/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/FollowUserListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/user/ChkFollowUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/FollowList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329">
+          <caret line="65" column="92" selection-start-line="65" selection-start-column="82" selection-end-line="65" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61">
+          <caret line="185" column="147" selection-start-line="185" selection-start-column="126" selection-end-line="185" selection-end-column="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/personalpage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="163" column="70" selection-start-line="163" selection-start-column="70" selection-end-line="163" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/searchpage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="112" column="70" selection-start-line="112" selection-start-column="54" selection-end-line="112" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="45" column="68" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/servlet/blog/QryUserBlogList4JspServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="65" column="42" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/public.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="49" column="68" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/myblog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unicom/blog/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2737">
+          <caret line="124" column="15" selection-start-line="124" selection-start-column="15" selection-end-line="124" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/publish.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="70" />
         </state>
       </provider>
     </entry>

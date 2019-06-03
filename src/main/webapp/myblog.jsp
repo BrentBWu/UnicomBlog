@@ -42,7 +42,7 @@
                 <a class="js-scroll-trigger" href="QryUserBlogList4JspServlet?uid=${user.uid}">个人主页</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#">关注列表</a>
+            <a class="js-scroll-trigger" href="FollowUserListServlet">关注列表</a>
         </li>
         <!-- <li class="sidebar-nav-item">
                 <a class="js-scroll-trigger" href="#footerInfo">关于我们</a>
@@ -57,16 +57,18 @@
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-                <a class="btn btn-warning btn-lg fa fa-heart" href="#"></a>
+                <c:if test="${user.uid != authorId}">
+                    <a class="btn btn-warning btn-lg fa fa-heart" onclick="FollowUser(${authorId})"></a>
+                </c:if>
                 <a class="btn btn-lg btn-dark" href="publish.jsp"
                    role="button">发表博文</a>
             </div>
             <div class="col-4 text-center">
                 <c:if test="${user.uid == authorId}">
-                    <a class="blog-header-logo text-dark" href="QryUserCollectBlogList4JspServlet?type=all">${nickName}</a>
+                    <a class="blog-header-logo text-dark" href="QryUserCollectBlogList4JspServlet?type=all">${user.nickName}</a>
                 </c:if>
                 <c:if test="${user.uid != authorId}">
-                 <a class="blog-header-logo text-dark" href="#">${user.nickName}</a>
+                 <a class="blog-header-logo text-dark" href="#">${nickName}</a>
                 </c:if>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
@@ -157,7 +159,7 @@
 </main><!-- /.container -->
 <footer>
     <div class="footerInfo" id="foot-info">
-        <i class="fa fa-copyright" aria-hidden="true">用户名</i>
+        <i class="fa fa-copyright" aria-hidden="true">${user.nickName}</i>
     </div>
 </footer>
 
