@@ -37,7 +37,7 @@
             <a class="js-scroll-trigger" href="#page-top">Unicom Blog</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#page-main">文章主页</a>
+            <a class="js-scroll-trigger" href="QryHightlightBlogList4JspServlet">文章主页</a>
         </li>
         <li class="sidebar-nav-item">
             <a class="js-scroll-trigger" href="QryUserBlogList4JspServlet?uid=${user.uid}">个人主页</a>
@@ -96,7 +96,7 @@
                         <p class="card-text">${userBlog.content}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="View(${userBlog.bid})">View</button>
                             </div>
                             <small class="text-muted">9 mins</small>
                         </div>

@@ -35,3 +35,59 @@ function likeBolg() {
         }
     });
 }
+
+
+function getUrlParam(name){
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+
+
+function CollectArticle(){
+    (function ($) {
+        $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+    })(jQuery);
+    var bid = $.getUrlParam('bid');
+    console.log(bid);
+    $.ajax({
+        //几个参数需要注意一下
+        type: "POST",//方法类型
+        url: "chkCollectBlog?bid="+bid ,//url
+        //data: $('#blogForm').serialize(),
+        success: function (result) {
+            if (result.RESP_DATA == false){//未关注过
+                // 成功
+                $.ajax({
+                    //几个参数需要注意一下
+                    type: "POST",//方法类型
+                    url: "collectBlog?bid="+bid ,//url
+                    //data: $('#blogForm').serialize(),
+                    success: function (result) {
+                        if (result.RESP_DATA == false){//未关注过
+                            alert(result.RESP_DESC);
+                        }else {
+                            // 失败
+                            alert(result.RESP_DESC);
+                        }
+                    },
+                    error : function(err) {
+                        alert("网络异常！");
+                    }
+                });
+
+            }else {
+                // 失败
+                alert("已收藏过");
+            }
+        },
+        error : function(err) {
+            alert("网络异常！");
+        }
+    });
+}
+

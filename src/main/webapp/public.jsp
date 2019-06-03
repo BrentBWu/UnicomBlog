@@ -69,11 +69,8 @@
             </a>
             <div class="col-4 d-flex justify-content-end align-items-center">
                 <nav class="navbar navbar-light">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2 bg-light" type="search" placeholder="搜索" aria-label="Search">
-                        <button class="btn btn-warning my-2 my-sm-0 fa fa-search btn-lg" aria-hidden="true"
-                                type="submit"></button>
-                    </form>
+                    <a href="searchpage.jsp"><button class="btn btn-warning my-2 my-sm-0 fa fa-search btn-lg" aria-hidden="true"
+                                                     type="submit"></button></a>
                 </nav>
             </div>
         </div>
@@ -95,44 +92,34 @@
                 <div class="container">
                     <div class="carousel-caption text-left">
                         <h1>Example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-dark" href="#"
-                              role="button">learn more</a></p>
+
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="slidegroup second-slide" src="Img/bg-masthead.jpg" alt="Second slide">
+                <img class="slidegroup second-slide" src="Img/1.jpg" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Another example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-dark" href="#"
-                              role="button">Learn more</a></p>
                     </div>
                 </div>
             </div>
             <div class="carousel-item active">
-                <img class="slidegroup third-slide" src="Img/bg-masthead.jpg" alt="Third slide">
+                <img class="slidegroup third-slide" src="Img/3.jpg" alt="Third slide">
                 <div class="container">
-                    <div class="carousel-caption text-right">
+                    <div class="carousel-caption">
                         <h1>One more for good measure.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-dark" href="#"
-                              role="button">learn more</a></p>
+
                     </div>
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#"
+        <a class="carousel-control-prev" href="#myCarousel"
            role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#"
+        <a class="carousel-control-next" href="#myCarousel"
            role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>

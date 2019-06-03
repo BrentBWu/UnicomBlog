@@ -58,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()
         <textarea id="summernote" name="content"></textarea>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-    <button type="button" class="btn btn-warning font-weight-bold text-dark" id="confirm-btn" onclick="blogFormSubmit()">确认修改</button>
+    <button type="button" class="btn btn-warning font-weight-bold text-dark" id="confirm-btn" onclick="blogUpdateSubmit(${user.uid})">确认修改</button>
     </div>
 </form>
 
@@ -71,7 +71,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 <!-- include summernote css/js -->
 <script src="vendor/dist/summernote-bs4.js"></script>
-
+<script src="JS/common.js" type="text/javascript" charset="utf-8"></script>
 <script src="JS/edit.js" type="text/javascript" charset="utf-8"></script>
 
 
