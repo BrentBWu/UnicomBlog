@@ -87,19 +87,4 @@ public class JDBCUtils {
         }
     }
 
-    public static void main(String[] args) {
-        try(Connection connection = JDBCUtils.getConnection();
-                PreparedStatement ps = connection.prepareStatement("select * from 成绩表;");
-                ResultSet rs = ps.executeQuery();) {
-            while(rs.next()) {
-                System.out.println(rs.getString("学生"));
-            }
-        } catch(ClassNotFoundException e) {
-            // TODO 自动生成的 catch 块
-            e.printStackTrace();
-        } catch(SQLException e) {
-            // TODO 自动生成的 catch 块
-            e.printStackTrace();
-        }
-    }
 }

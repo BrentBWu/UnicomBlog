@@ -20,6 +20,11 @@ import java.util.List;
 @WebServlet(name = "FollowUserListServlet")
 public class FollowUserListServlet extends HttpServlet {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 2698794023194194936L;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);
@@ -41,7 +46,7 @@ public class FollowUserListServlet extends HttpServlet {
             Result<List<User>> result = UserService.followUserList(user.getUid());
             List<User> followUserList = result.getRespData();
             request.setAttribute("respDesc", "获取关注列表成功");
-            request.setAttribute("followUserList", "followUserList");
+            request.setAttribute("followUserList", followUserList);
             //跳转原来页面
             request.getRequestDispatcher("#").forward(request, response);
         }

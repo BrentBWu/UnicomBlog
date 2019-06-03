@@ -2,7 +2,6 @@ package com.unicom.blog.servlet;
 
 import com.unicom.blog.beans.Result;
 import com.unicom.blog.beans.User;
-import com.unicom.blog.dao.UserDao;
 import com.unicom.blog.service.UserService;
 
 import javax.servlet.ServletException;
@@ -19,6 +18,11 @@ import java.io.IOException;
  */
 @WebServlet(name = "UpdatePasswordServlet")
 public class UpdatePasswordServlet extends HttpServlet {
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -8657061513593962235L;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

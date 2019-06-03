@@ -1,7 +1,5 @@
 package com.unicom.blog.test;
 
-import com.unicom.blog.beans.User;
-import com.unicom.blog.dao.UserDao;
 import com.unicom.blog.service.UserService;
 
 public class test {

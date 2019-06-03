@@ -74,7 +74,6 @@ public class UserDao {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-        boolean flag = false;
         User user = new User();
         try {
             connection = JDBCUtils.getConnection();

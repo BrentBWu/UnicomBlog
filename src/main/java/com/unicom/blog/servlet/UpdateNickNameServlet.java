@@ -19,6 +19,11 @@ import java.io.IOException;
 @WebServlet(name = "UpdateNickNameServlet")
 public class UpdateNickNameServlet extends HttpServlet {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 2456277721878549577L;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);

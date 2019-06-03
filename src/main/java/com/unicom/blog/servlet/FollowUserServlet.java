@@ -19,6 +19,11 @@ import java.io.IOException;
 @WebServlet(name = "FollowUserServlet")
 public class FollowUserServlet extends HttpServlet {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -2829546216388332175L;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);

@@ -18,6 +18,11 @@ import java.io.IOException;
 @WebServlet(name = "/RegistServlet")
 public class RegistServlet extends HttpServlet {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 8917516660041674178L;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);

@@ -2,8 +2,6 @@ package com.unicom.blog.servlet.blog;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
-
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -39,7 +37,7 @@ public class QryUserBlogList4JspServlet extends HttpServlet {
         Result<List<UserBlogVO>> result = new Result<>();
         try {
             Integer uid = null;
-            String sUid = Optional.ofNullable(request.getParameter("uid")).orElse(StringUtils.EMPTY);
+            String sUid = request.getParameter("uid");
             if(StringUtils.isEmpty(sUid)) {
                 result.setRespCode(RespCode.FAIL_CODE);
                 result.setRespDesc("字段不能为空！");
