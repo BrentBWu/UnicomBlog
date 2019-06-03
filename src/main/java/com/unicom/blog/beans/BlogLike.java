@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  *博客点赞表
+ * @author Xueting Ou
  */
 public class BlogLike {
 

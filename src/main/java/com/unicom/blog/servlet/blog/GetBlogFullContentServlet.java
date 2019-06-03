@@ -49,6 +49,7 @@ public class GetBlogFullContentServlet extends HttpServlet {
                 resp.getWriter().print(JSON.toJSONString(result, SerializerFeature.WriteMapNullValue));
                 return;
             }
+
             resp.getWriter()
                     .print(JSON.toJSONString(blogService.getBlogFullContent(bid), SerializerFeature.WriteMapNullValue));
         } catch(Exception e) {

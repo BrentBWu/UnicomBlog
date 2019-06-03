@@ -122,7 +122,7 @@ function loginFormSubmit(){
     data: $('#loginForm').serialize(),
     success: function (result) {
       if (result == '登陆成功'){
-        window.location.href = "public.jsp";
+        window.location.href = "QryHightlightBlogList4JspServlet";
       }else{
         alert(result);
       }
@@ -131,5 +131,8 @@ function loginFormSubmit(){
       alert("网络异常！");
     }
   });
+}
+function View(bid) {
+  window.location.href = "view.jsp?bid="+bid;
 }
 

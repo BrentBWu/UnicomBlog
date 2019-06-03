@@ -52,7 +52,7 @@ public class QryBlogListByKeyword4JspServlet extends HttpServlet {
         request.setAttribute("respDesc", result.getRespDesc());
         request.setAttribute("respData", result.getRespData());
         try {
-            request.getRequestDispatcher("").forward(request, response);
+            request.getRequestDispatcher("searchpage.jsp").forward(request, response);
         } catch(Exception e) {
             result.setRespCode(RespCode.FAIL_CODE);
             result.setRespDesc("服务器转发错误" + e.getMessage());

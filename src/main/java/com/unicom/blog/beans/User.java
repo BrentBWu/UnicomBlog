@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  * 用户
+ * @author Xueting Ou
  */
 public class User {
 

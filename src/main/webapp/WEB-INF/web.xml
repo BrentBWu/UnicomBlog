@@ -58,6 +58,10 @@
     <url-pattern>/UpdateUserInfoServlet</url-pattern>
   </servlet-mapping>
 
+  <listener>
+    <listener-class>com.unicom.blog.servlet.listener.HighBolgListener</listener-class>
+  </listener>
+
 </web-app>
 
 
