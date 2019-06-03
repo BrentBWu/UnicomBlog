@@ -58,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()
         <textarea id="summernote" name="content"></textarea>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-    <button type="button" class="btn btn-warning font-weight-bold text-dark" id="confirm-btn" onclick="blogFormSubmit()">确认发布</button>
+    <button type="button" class="btn btn-warning font-weight-bold text-dark" id="confirm-btn" onclick="blogFormSubmit(${user.uid})">确认发布</button>
     </div>
 </form>
 

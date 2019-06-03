@@ -20,6 +20,7 @@
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
     <!--Custom css-->
     <link rel="stylesheet" href="CSS/myblog.css" type="text/css">
+    <link rel="stylesheet" href="CSS/common.css" type="text/css">
 </head>
 
 <body class="bg-light">
@@ -34,7 +35,7 @@
             <a class="js-scroll-trigger" href="#page-top">Unicom Blog</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#page-main">文章主页</a>
+            <a class="js-scroll-trigger" href="QryHightlightBlogList4JspServlet">文章主页</a>
         </li>
         <c:if test="${not empty user}">
             <li class="sidebar-nav-item">
@@ -58,18 +59,15 @@
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-               <a class="btn btn-warning btn-lg fa fa-heart" href="#"></a>
+               <a class="btn btn-warning btn-lg fa fa-star" onclick="CollectArticle()"></a>
             </div>
             <div class="col-4 text-center">
                 <a class="blog-header-logo text-dark" href="#" id="username"></a>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
                 <nav class="navbar navbar-light bg-light">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="搜索" aria-label="Search">
-                        <button class="btn btn-warning my-2 my-sm-0 fa fa-search btn-lg" aria-hidden="true"
-                                type="submit"></button>
-                    </form>
+                    <a href="searchpage.jsp"><button class="btn btn-warning my-2 my-sm-0 fa fa-search btn-lg" aria-hidden="true"
+                                                     type="submit"></button></a>
                 </nav>
             </div>
         </div>
@@ -78,6 +76,7 @@
     </div>
 </div>
 
+<div class="blogbody">
 <main role="main" class="container" id="page-main">
     <div class="row">
         <div class="blog-main">
@@ -85,7 +84,7 @@
             <div class="blog-post">
                 <h2 class="blog-post-title" id="title"></h2>
                 <p class="blog-post-meta" id="createDate">
-                    <a href="https://getbootstrap.com/docs/4.3/examples/blog/#" id="author">ff</a>
+<%--                    <a href="https://getbootstrap.com/docs/4.3/examples/blog/#" id="author"></a>--%>
                 </p>
 
                 <hr>
@@ -105,6 +104,7 @@
     </button>
 </div>
 
+</div>
 <footer>
     <div class="footerInfo" id="foot-info">
         <i class="fa fa-copyright" aria-hidden="true">${user.nickName}</i>

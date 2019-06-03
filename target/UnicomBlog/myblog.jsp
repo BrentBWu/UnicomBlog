@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +22,7 @@
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
     <!--Custom css-->
     <link rel="stylesheet" href="CSS/myblog.css" type="text/css">
+    <link rel="stylesheet" href="CSS/common.css" type="text/css">
 </head>
 
 <body class="bg-light">
@@ -36,10 +37,10 @@
             <a class="js-scroll-trigger" href="#page-top">Unicom Blog</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#page-main" >文章主页</a>
+            <a class="js-scroll-trigger" href="QryHightlightBlogList4JspServlet">文章主页</a>
         </li>
         <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="QryUserBlogList4JspServlet?uid=${user.uid}">个人主页</a>
+            <a class="js-scroll-trigger" href="QryUserBlogList4JspServlet?uid=${user.uid}">个人主页</a>
         </li>
         <li class="sidebar-nav-item">
             <a class="js-scroll-trigger" href="FollowUserListServlet">关注列表</a>
@@ -65,105 +66,109 @@
             </div>
             <div class="col-4 text-center">
                 <c:if test="${user.uid == authorId}">
-                    <a class="blog-header-logo text-dark" href="QryUserCollectBlogList4JspServlet?type=all">${user.nickName}</a>
+                    <a class="blog-header-logo text-dark"
+                       href="QryUserCollectBlogList4JspServlet?type=all">${user.nickName}</a>
                 </c:if>
                 <c:if test="${user.uid != authorId}">
-                 <a class="blog-header-logo text-dark" href="#">${nickName}</a>
+                    <a class="blog-header-logo text-dark" href="#">${nickName}</a>
                 </c:if>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
                 <nav class="navbar navbar-light bg-light">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="搜索" aria-label="Search">
-                        <button class="btn btn-warning my-2 my-sm-0 fa fa-search btn-lg" aria-hidden="true" type="submit"></button>
-                    </form>
+                    <a href="searchpage.jsp">
+                        <button class="btn btn-warning my-2 my-sm-0 fa fa-search btn-lg" aria-hidden="true"
+                                type="submit"></button>
+                    </a>
                 </nav>
             </div>
         </div>
     </header>
-    <div class="nav-scroller py-1 mb-2">
-    </div>
 
-    <c:if test="${empty UserBlogList}">
-        <p>暂无文章</p>
-    </c:if>
-    <c:if test="${not empty UserBlogList}">
-        <c:forEach items="${UserBlogList}" var="userBlog" begin="0" end="0">
+    <div class="blogbody">
+        <div class="nav-scroller py-1 mb-2">
+        </div>
 
-            <div class="jumbotron p-4 p-md-5 text-dark rounded bg-warning">
-                <div class="col-md-6 px-0">
-                    <h1 class="display-4 font-italic">${userBlog.title }</h1>
-                    <p class="lead my-3">${userBlog.content }</p>
-                    <p class="lead mb-0"><a href="view.jsp?bid=${userBlog.bid}"
-                                            class="text text-dark font-weight-bold">Continue reading...</a></p>
-                </div>
-            </div>
-        </c:forEach>
+        <c:if test="${empty UserBlogList}">
+            <p>暂无文章</p>
+        </c:if>
+        <c:if test="${not empty UserBlogList}">
+            <c:forEach items="${UserBlogList}" var="userBlog" begin="0" end="0">
 
-    </c:if>
-
-    <c:if test="${length>1}">
-        <div class="row mb-2">
-            <c:forEach items="${UserBlogList}" var="userBlog" begin="1" end="2">
-                <div class="col-md-6">
-                    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 inline-title">Unicom</strong>
-                            <h3 class="mb-0">${userBlog.title}</h3>
-                            <div class="mb-1 text-muted">${userBlog.createTime}</div>
-                            <p class="card-text mb-auto">${userBlog.content}</p>
-                        </div>
-                        <!--read more btn-->
-                        <button class="btn btn-dark justify-content-center align-items-center read-more" onclick="View(${userBlog.bid})">
-                            Read More
-                        </button>
+                <div class="jumbotron p-4 p-md-5 text-dark rounded bg-warning">
+                    <div class="col-md-6 px-0">
+                        <h1 class="display-4 font-italic">${userBlog.title }</h1>
+                        <p class="lead my-3">${userBlog.content }</p>
+                        <p class="lead mb-0"><a href="view.jsp?bid=${userBlog.bid}"
+                                                class="text text-dark font-weight-bold">Continue reading...</a></p>
                     </div>
                 </div>
-
             </c:forEach>
-        </div>
-    </c:if>
-</div>
 
-<main role="main" class="container" id="page-main">
-    <div class="row">
-        <div class="blog-main">
-            <h3 class="pb-4 mb-4 font-italic border-bottom">
-                From the Firehose
-            </h3>
+        </c:if>
 
-            <c:if test="${empty UserBlogList}">
-                <p>暂无文章</p>
-            </c:if>
-            <c:if test="${not empty UserBlogList}">
-                <c:if test="${length>1}">
-                    <c:forEach items="${UserBlogList}" var="userBlog" begin="3" >
-                        <div class="blog-post">
-                            <h2 class="blog-post-title">${userBlog.title}</h2>
-                            <p class="blog-post-meta">${userBlog.createTime}<a
-                                    href="QryUserBlogList4JspServlet?uid=${userBlog.uid}">${userBlog.nickName}</a></p>
-
-                            <p>${userBlog.content}</p>
-                            <hr>
-
+        <c:if test="${length>1}">
+            <div class="row mb-2">
+                <c:forEach items="${UserBlogList}" var="userBlog" begin="1" end="2">
+                    <div class="col-md-6">
+                        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 inline-title">Unicom</strong>
+                                <h3 class="mb-0">${userBlog.title}</h3>
+                                <div class="mb-1 text-muted">${userBlog.createTime}</div>
+                                <p class="card-text mb-auto">${userBlog.content}</p>
+                            </div>
+                            <!--read more btn-->
+                            <button class="btn btn-dark justify-content-center align-items-center read-more"
+                                    onclick="View(${userBlog.bid})">
+                                Read More
+                            </button>
                         </div>
-                     </c:forEach>
+                    </div>
+
+                </c:forEach>
+            </div>
+        </c:if>
+    </div>
+
+    <main role="main" class="container" id="page-main">
+        <div class="row">
+            <div class="blog-main">
+                <h3 class="pb-4 mb-4 font-italic border-bottom">
+                    From the Firehose
+                </h3>
+
+                <c:if test="${empty UserBlogList}">
+                    <p>暂无文章</p>
                 </c:if>
-            </c:if>
-           <!-- /.blog-post -->
+                <c:if test="${not empty UserBlogList}">
+                    <c:if test="${length>1}">
+                        <c:forEach items="${UserBlogList}" var="userBlog" begin="3">
+                            <div class="blog-post">
+                                <h2 class="blog-post-title">${userBlog.title}</h2>
+                                <p class="blog-post-meta">${userBlog.createTime}<a
+                                        href="QryUserBlogList4JspServlet?uid=${userBlog.uid}">${userBlog.nickName}</a>
+                                </p>
 
-        </div><!-- /.blog-main -->
+                                <p>${userBlog.content}</p>
+                                <hr>
 
-    </div><!-- /.row -->
+                            </div>
+                        </c:forEach>
+                    </c:if>
+                </c:if>
+                <!-- /.blog-post -->
 
-</main><!-- /.container -->
+            </div><!-- /.blog-main -->
+
+        </div><!-- /.row -->
+
+    </main><!-- /.container -->
+</div>
 <footer>
     <div class="footerInfo" id="foot-info">
         <i class="fa fa-copyright" aria-hidden="true">${user.nickName}</i>
     </div>
 </footer>
-
-
 
 
 <!-- Bootstrap core JavaScript -->
