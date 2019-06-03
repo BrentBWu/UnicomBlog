@@ -359,7 +359,7 @@ public class BlogService {
 			    
 			    String qrySql = "SELECT b.*,c.nick_name,c.head_icon from T_BLOG_COLLECTIONS"
 			    		+ " a LEFT JOIN T_BLOG  b on a.bid = b.bid  LEFT JOIN T_USER c"
-			    		+ " ON  b.uid =c.uid where b.uid = ? and a.sts = 'N' ORDER BY a.create_time";
+			    		+ " ON  b.uid =c.uid where b.uid = ? and b.sts = 'N' ORDER BY a.create_time";
 		    	PreparedStatement qryPstmt;
 		    	qryPstmt = (PreparedStatement) conn.prepareStatement(qrySql);
 		    	qryPstmt.setInt(1, uid);

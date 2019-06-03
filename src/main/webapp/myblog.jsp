@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: brent
+  User: User: Bowen Wu, Xueting Ou
   Date: 30/05/2019
   Time: 9:06 PM
   To change this template use File | Settings | File Templates.
@@ -39,7 +39,7 @@
             <a class="js-scroll-trigger" href="#page-main" >文章主页</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#">个人主页</a>
+                <a class="js-scroll-trigger" href="QryUserBlogList4JspServlet?uid=${user.uid}">个人主页</a>
         </li>
         <li class="sidebar-nav-item">
             <a class="js-scroll-trigger" href="#">关注列表</a>
@@ -58,9 +58,16 @@
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
                 <a class="btn btn-warning btn-lg fa fa-heart" href="#"></a>
+                <a class="btn btn-lg btn-dark" href="publish.jsp"
+                   role="button">发表博文</a>
             </div>
             <div class="col-4 text-center">
-                <a class="blog-header-logo text-dark" href="QryUserCollectBlogList4JspServlet?type=all">${user.nickName}</a>
+                <c:if test="${user.uid == authorId}">
+                    <a class="blog-header-logo text-dark" href="QryUserCollectBlogList4JspServlet?type=all">${nickName}</a>
+                </c:if>
+                <c:if test="${user.uid != authorId}">
+                 <a class="blog-header-logo text-dark" href="#">${user.nickName}</a>
+                </c:if>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
                 <nav class="navbar navbar-light bg-light">
@@ -75,49 +82,45 @@
     <div class="nav-scroller py-1 mb-2">
     </div>
 
-    <div class="jumbotron p-4 p-md-5 text-dark rounded bg-warning">
-        <div class="col-md-6 px-0">
-            <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-            <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
-                efficiently about what’s most interesting in this post’s contents.</p>
-            <p class="lead mb-0"><a href="https://getbootstrap.com/docs/4.3/examples/blog/#"
-                                    class="text text-dark font-weight-bold">Continue reading...</a></p>
-        </div>
-    </div>
+    <c:if test="${empty UserBlogList}">
+        <p>暂无文章</p>
+    </c:if>
+    <c:if test="${not empty UserBlogList}">
+        <c:forEach items="${UserBlogList}" var="userBlog" begin="0" end="0">
 
-    <div class="row mb-2">
-        <div class="col-md-6">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2 inline-title">World</strong>
-                    <h3 class="mb-0">Featured post</h3>
-                    <div class="mb-1 text-muted">Nov 12</div>
-                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
-                        additional content.</p>
+            <div class="jumbotron p-4 p-md-5 text-dark rounded bg-warning">
+                <div class="col-md-6 px-0">
+                    <h1 class="display-4 font-italic">${userBlog.title }</h1>
+                    <p class="lead my-3">${userBlog.content }</p>
+                    <p class="lead mb-0"><a href="view.jsp?bid=${userBlog.bid}"
+                                            class="text text-dark font-weight-bold">Continue reading...</a></p>
                 </div>
-                <!--read more btn-->
-                <button href="#" class="btn btn-dark justify-content-center align-items-center read-more">
-                    Read More
-                </button>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2 inline-title">Design</strong>
-                    <h3 class="mb-0">Post title</h3>
-                    <div class="mb-1 text-muted">Nov 11</div>
-                    <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
-                        additional content.</p>
-                </div>
-                <!-- read more btn-->
-                <button href="#" class="btn btn-dark justify-content-center align-items-center read-more">
-                    Read More
-                </button>
+        </c:forEach>
 
-            </div>
+    </c:if>
+
+    <c:if test="${length>1}">
+        <div class="row mb-2">
+            <c:forEach items="${UserBlogList}" var="userBlog" begin="1" end="2">
+                <div class="col-md-6">
+                    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 inline-title">Unicom</strong>
+                            <h3 class="mb-0">${userBlog.title}</h3>
+                            <div class="mb-1 text-muted">${userBlog.createTime}</div>
+                            <p class="card-text mb-auto">${userBlog.content}</p>
+                        </div>
+                        <!--read more btn-->
+                        <button class="btn btn-dark justify-content-center align-items-center read-more" onclick="View(${userBlog.bid})">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+
+            </c:forEach>
         </div>
-    </div>
+    </c:if>
 </div>
 
 <main role="main" class="container" id="page-main">
@@ -127,101 +130,31 @@
                 From the Firehose
             </h3>
 
-            <div class="blog-post">
-                <h2 class="blog-post-title">Sample blog post</h2>
-                <p class="blog-post-meta">January 1, 2014 by <a
-                        href="https://getbootstrap.com/docs/4.3/examples/blog/#">Mark</a></p>
+            <c:if test="${empty UserBlogList}">
+                <p>暂无文章</p>
+            </c:if>
+            <c:if test="${not empty UserBlogList}">
+                <c:if test="${length>1}">
+                    <c:forEach items="${UserBlogList}" var="userBlog" begin="3" >
+                        <div class="blog-post">
+                            <h2 class="blog-post-title">${userBlog.title}</h2>
+                            <p class="blog-post-meta">${userBlog.createTime}<a
+                                    href="QryUserBlogList4JspServlet?uid=${userBlog.uid}">${userBlog.nickName}</a></p>
 
-                <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                    Basic typography, images, and code are all supported.</p>
-                <hr>
-                <p>Cum sociis natoque penatibus et magnis <a href="https://getbootstrap.com/docs/4.3/examples/blog/#">dis
-                    parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia
-                    quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus
-                    sit amet fermentum.</p>
-                <blockquote>
-                    <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare
-                        vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                </blockquote>
-                <p>Etiam porta <em>sem magna</em> mollis euismod. Cras mattis consectetur purus sit amet
-                    fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                <h2>Heading</h2>
-                <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo
-                    luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac
-                    consectetur ac, vestibulum at eros.</p>
-                <h3>Sub-heading</h3>
-                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                <pre><code>Example code block</code></pre>
-                <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce
-                    dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-                <h3>Sub-heading</h3>
-                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia
-                    bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus,
-                    tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-                    risus.</p>
-                <ul>
-                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-                    <li>Donec id elit non mi porta gravida at eget metus.</li>
-                    <li>Nulla vitae elit libero, a pharetra augue.</li>
-                </ul>
-                <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-                <ol>
-                    <li>Vestibulum id ligula porta felis euismod semper.</li>
-                    <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-                    <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-                </ol>
-                <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-            </div><!-- /.blog-post -->
+                            <p>${userBlog.content}</p>
+                            <hr>
 
-            <div class="blog-post">
-                <h2 class="blog-post-title">Another blog post</h2>
-                <p class="blog-post-meta">December 23, 2013 by <a
-                        href="https://getbootstrap.com/docs/4.3/examples/blog/#">Jacob</a></p>
-
-                <p>Cum sociis natoque penatibus et magnis <a href="https://getbootstrap.com/docs/4.3/examples/blog/#">dis
-                    parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia
-                    quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus
-                    sit amet fermentum.</p>
-                <blockquote>
-                    <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare
-                        vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                </blockquote>
-                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet
-                    fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo
-                    luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac
-                    consectetur ac, vestibulum at eros.</p>
-            </div><!-- /.blog-post -->
-
-            <div class="blog-post">
-                <h2 class="blog-post-title">New feature</h2>
-                <p class="blog-post-meta">December 14, 2013 by <a
-                        href="https://getbootstrap.com/docs/4.3/examples/blog/#">Chris</a></p>
-
-                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia
-                    bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus,
-                    tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-                    risus.</p>
-                <ul>
-                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-                    <li>Donec id elit non mi porta gravida at eget metus.</li>
-                    <li>Nulla vitae elit libero, a pharetra augue.</li>
-                </ul>
-                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet
-                    fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-            </div><!-- /.blog-post -->
+                        </div>
+                     </c:forEach>
+                </c:if>
+            </c:if>
+           <!-- /.blog-post -->
 
         </div><!-- /.blog-main -->
 
     </div><!-- /.row -->
 
 </main><!-- /.container -->
-
-<div class="container btn-like">
-    <button class="btn btn-warning btn-lg btn-circle" id="like-icon"><i class="fa fa-2x fa-thumbs-up" aria-hidden="true"></i></button>
-</div>
-
 <footer>
     <div class="footerInfo" id="foot-info">
         <i class="fa fa-copyright" aria-hidden="true">用户名</i>

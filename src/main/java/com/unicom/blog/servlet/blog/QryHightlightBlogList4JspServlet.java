@@ -2,6 +2,9 @@ package com.unicom.blog.servlet.blog;
 
 import java.io.IOException;
 import java.util.List;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +28,8 @@ public class QryHightlightBlogList4JspServlet extends HttpServlet {
     BlogService blogService = new BlogService();
     private static final long serialVersionUID = 1L;
 
+
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         doGet(request, response);
@@ -36,9 +41,9 @@ public class QryHightlightBlogList4JspServlet extends HttpServlet {
         result = blogService.qryHighlightBlogList();
         request.setAttribute("respCode", result.getRespCode());
         request.setAttribute("respDesc", result.getRespDesc());
-        request.setAttribute("respData", result.getRespData());
+        request.setAttribute("hightBlogs", result.getRespData());
         try {
-            request.getRequestDispatcher("").forward(request, response);
+            request.getRequestDispatcher("public.jsp").forward(request, response);
         } catch(Exception e) {
             result.setRespCode(RespCode.FAIL_CODE);
             result.setRespDesc("服务器转发错误" + e.getMessage());

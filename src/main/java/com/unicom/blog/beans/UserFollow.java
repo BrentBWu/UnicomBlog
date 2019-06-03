@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  *用户关注表
- * @author XuetingOu
+ * @author Xueting Ou
  */
 public class UserFollow {
 

@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  * 博客
+ * @author Xueting Ou
  */
 public class Blog {
 

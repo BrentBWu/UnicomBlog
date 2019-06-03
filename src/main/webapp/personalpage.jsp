@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  author: Bowen Wu   Xueting ou
+  Date: 30/06/2019
+  Time: 11:28 AM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
@@ -31,7 +38,7 @@
 
     <div class="navbar navbar-dark bg-warning">
         <div class="container d-flex justify-content-between">
-            <a href="#" class="navbar-brand d-flex align-items-center text-dark">
+            <a href="QryHightlightBlogList4JspServlet" class="navbar-brand d-flex align-items-center text-dark">
                 <strong>Unicom Blog.</strong>
             </a>
             <button class="navbar-toggler collapsed bg-dark d-flex justify-content-center align-items-center info-changer"
@@ -100,8 +107,8 @@
                                         <p class="card-text">${userBlog.content}</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                <a href="view.jsp?bid=${userBlog.bid}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                                <a href="edit.jsp?bid=${userBlog.bid}"><button type="button" class="btn btn-sm btn-outline-secondary">Edit</button></a>
                                                 <button type="button" class="btn btn-sm btn-danger btn-outline-secondary text-light" onclick="deleteBlog(${userBlog.bid})">Delete</button>
                                             </div>
                                             <small class="text-muted">9 mins</small>
@@ -130,7 +137,9 @@
                                     <p class="card-text">${userBlog.content}</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <a href="view.jsp?bid=${userBlog.bid}">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary" >View</button>
+                                            </a>
                                         </div>
                                         <small class="text-muted">9 mins</small>
                                     </div>

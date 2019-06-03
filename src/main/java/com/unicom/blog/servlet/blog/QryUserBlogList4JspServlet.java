@@ -36,9 +36,12 @@ public class QryUserBlogList4JspServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 
         Result<List<UserBlogVO>> result = new Result<>();
+        String stype = null;
         try {
             Integer uid = null;
             String sUid = request.getParameter("uid");
+            stype=request.getParameter("type");
+
             if(StringUtils.isEmpty(sUid)) {
                 result.setRespCode(RespCode.FAIL_CODE);
                 result.setRespDesc("字段不能为空！");
@@ -57,9 +60,20 @@ public class QryUserBlogList4JspServlet extends HttpServlet {
         request.setAttribute("respCode", result.getRespCode());
         request.setAttribute("respDesc", result.getRespDesc());
         request.setAttribute("UserBlogList", result.getRespData());
-        System.out.println(request.getAttribute("collectionBolgList"));
+
+        if (result.getRespData()!=null){
+            request.setAttribute("length", result.getRespData().size());
+            request.setAttribute("nickName",result.getRespData().get(0).getNickName());
+            request.setAttribute("authorId",result.getRespData().get(0).getUid());
+        }
+       // System.out.println(request.getAttribute("collectionBolgList"));
         try {
-            request.getRequestDispatcher("personalpage.jsp").forward(request, response);
+            if("all".equals(stype)){
+                request.getRequestDispatcher("personalpage.jsp").forward(request, response);
+            }else{
+                request.getRequestDispatcher("myblog.jsp").forward(request, response);
+            }
+
         } catch(Exception e) {
             result.setRespCode(RespCode.FAIL_CODE);
             result.setRespDesc("服务器转发错误" + e.getMessage());
