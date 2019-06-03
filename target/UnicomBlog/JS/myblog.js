@@ -72,3 +72,40 @@ $('.map').on('click', onMapClickHandler);
 function View(bid) {
     window.location.href = "view.jsp?bid="+bid;
 }
+function FollowUser(authorId){
+    $.ajax({
+        //几个参数需要注意一下
+        type: "POST",//方法类型
+        url: "ChkFollowUserServlet?uid="+authorId ,//url
+        //data: $('#blogForm').serialize(),
+        success: function (result) {
+            if (result.RESP_CODE == '0000'){//未关注过
+                // 成功
+                    $.ajax({
+                        //几个参数需要注意一下
+                        type: "POST",//方法类型
+                        url: "FollowUserServlet?uid="+authorId ,//url
+                        //data: $('#blogForm').serialize(),
+                        success: function (result) {
+                            if (result.RESP_CODE == '0000'){//未关注过
+                                alert(result.RESP_DESC);
+                            }else {
+                                // 失败
+                                alert(result.RESP_DESC);
+                            }
+                        },
+                        error : function(err) {
+                            alert("网络异常！");
+                        }
+                    });
+
+            }else {
+                // 失败
+                alert(result.RESP_DESC);
+            }
+        },
+        error : function(err) {
+            alert("网络异常！");
+        }
+    });
+}

@@ -189,5 +189,16 @@ public class UserService {
         return result;
     }
 
+    //判断是否关注
+    public static Result<Boolean> chkFollowUser(int uid,int followeduid){
+        Result<Boolean> result=new Result<Boolean>();
+        boolean isfollowed=UserDao.chkFollowUser(uid,followeduid);
+        result.setRespCode("0000");
+        result.setRespDesc("成功判断");
+        result.setRespData(isfollowed);
+        System.out.println(isfollowed);
+        return result;
+    }
+
 
 }

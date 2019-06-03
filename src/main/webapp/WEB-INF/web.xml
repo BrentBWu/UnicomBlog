@@ -40,14 +40,8 @@
     <url-pattern>/UpdateNickNameServlet</url-pattern>
   </servlet-mapping>
 
-  <servlet>
-    <servlet-name>FollowUserServlet</servlet-name>
-    <servlet-class>com.unicom.blog.servlet.user.FollowUserServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>FollowUserServlet</servlet-name>
-    <url-pattern>/FollowUserServlet</url-pattern>
-  </servlet-mapping>
+
+
 
   <servlet>
     <servlet-name>UpdateUserInfoServlet</servlet-name>

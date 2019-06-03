@@ -31,44 +31,12 @@
 
     <div class="navbar navbar-dark bg-warning">
         <div class="container d-flex justify-content-between">
-            <a href="#" class="navbar-brand d-flex align-items-center text-dark">
-                <strong>Unicom Blog.</strong>
+            <a href="QryUserBlogList4JspServlet?uid=${user.uid}" class="navbar-brand d-flex align-items-center text-dark">
+                <strong>My Blog.</strong>
             </a>
-<%--            <button class="navbar-toggler collapsed bg-dark d-flex justify-content-center align-items-center info-changer"--%>
-<%--                    type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader"--%>
-<%--                    aria-expanded="false" aria-label="Toggle navigation">--%>
-<%--                <span class="text-warning font-weight-bold">资料修改</span>--%>
-<%--            </button>--%>
+
         </div>
     </div>
-<%--    <div class="bg-warning collapse" id="navbarHeader">--%>
-<%--        <div class="container">--%>
-<%--            <div class="row d-flex justify-content-center align-items-center changer-form">--%>
-<%--                <form id="updatePwdForm">--%>
-<%--                    <div class="form-group">--%>
-<%--                        <label class="font-weight-bold text-dark font-weight-bold">原始密码</label>--%>
-<%--                        <input type="password" class="form-control" id="oldpwd" name="oldPassword" placeholder="请输入旧密码" >--%>
-<%--                    </div>--%>
-<%--                    <div class="form-group">--%>
-<%--                        <label class="font-weight-bold text-dark font-weight-bold">密码</label>--%>
-<%--                        <input type="password" class="form-control" id="pwd" name="password1" placeholder="请输入新密码" onblur="checkNewPass()">--%>
-<%--                    </div>--%>
-<%--                    <div class="form-group">--%>
-<%--                        <label class="font-weight-bold text-dark font-weight-bold">确认密码</label>--%>
-<%--                        <input type="password" class="form-control" id="pwd1" name="password2"  placeholder="请确认密码"--%>
-<%--                               onkeypress="pwdRecover()">--%>
-<%--                    </div>--%>
-<%--                    <div class="form-group">--%>
-<%--                        <label class="font-weight-bold text-dark font-weight-bold">昵称</label>--%>
-<%--                        <input type="text" class="form-control" id="text" name="nickname" placeholder="请输入昵称">--%>
-<%--                        <button type="button" class="btn btn-dark font-weight-bold changer-footer" id="register-btn"--%>
-<%--                                onmouseover="pwdVlidator()" onclick="updatePwdForm()">确认修改--%>
-<%--                        </button>--%>
-<%--                    </div>--%>
-<%--                </form>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
 </header>
 
 <main role="main">
@@ -85,61 +53,22 @@
 
     <div class="album py-5 bg-light myblogs">
         <div class="container">
-            <div class="text-dark font-weight-bold myblogstitle">我的文章</div>
+            <div class="text-dark font-weight-bold myblogstitle">我的关注列表</div>
             <div class="row">
-                    <c:if test="${empty UserBlogList}">
-                        <p>无文章</p>
+                    <c:if test="${empty followUserList}">
+                        <p>暂无关注人员</p>
                     </c:if>
-                    <c:if test="${not empty UserBlogList}">
-                        <c:forEach items="${UserBlogList}" var="userBlog"  end="2">
+                    <c:if test="${not empty followUserList}">
+                        <c:forEach items="${followUserList}" var="followuser" >
                             <div class="col-md-4">
                                 <div class="card mb-4 shadow-sm">
-
                                     <div class="card-body">
-                                        <h5 class="card-title font-weight-bold">${userBlog.title}</h5>
-                                        <p class="card-text">${userBlog.content}</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                                <button type="button" class="btn btn-sm btn-danger btn-outline-secondary text-light" onclick="deleteBlog(${userBlog.bid})">Delete</button>
-                                            </div>
-                                            <small class="text-muted">9 mins</small>
-                                        </div>
+                                        <h5 class="card-title font-weight-bold">${followuser.nickName}</h5>
                                     </div>
                                 </div>
                             </div>
                         </c:forEach>
                     </c:if>
-
-
-
-            </div>
-            <div class="text-dark font-weight-bold myblogstitle">我的收藏</div>
-            <div class="row">
-                <c:if test="${empty collectionBolgList}">
-                    <p>无收藏文章</p>
-                </c:if>
-                <c:if test="${not empty collectionBolgList}">
-                    <c:forEach items="${collectionBolgList}" var="userBlog"  end="2">
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-
-                                <div class="card-body">
-                                    <h5 class="card-title font-weight-bold">${userBlog.title}</h5>
-                                    <p class="card-text">${userBlog.content}</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        </div>
-                                        <small class="text-muted">9 mins</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </c:forEach>
-                </c:if>
 
             </div>
 
@@ -152,7 +81,7 @@
 
 <footer class="bg-dark">
     <div class="footerInfo" id="foot-info">
-        <i class="fa fa-copyright" aria-hidden="true">用户名</i>
+        <i class="fa fa-copyright" aria-hidden="true">${user.nickName}</i>
     </div>
 </footer>
 <!-- Bootstrap core JavaScript -->
